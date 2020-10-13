@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="643px"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="40px"
+    android:paddingTop="30px"
+    android:paddingRight="40px"
+    android:paddingBottom="30px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/msg_biaoti" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:text="电梯基础信息"
+            android:textColor="@android:color/white"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_liftInfo"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="#33020f30"
+        android:paddingTop="20px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/msg_biaoti" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:text="举报投诉评价"
+            android:textColor="@android:color/white"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="#33020f30"
+        android:orientation="vertical"
+        android:padding="30px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评价:"
+                android:textColor="#61a0ff"
+                android:textSize="24px" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="31px"
+                app:clickable="true"
+                app:halfstart="true"
+                app:starCount="5"
+                app:starEmpty="@drawable/star_nor"
+                app:starFill="@drawable/star_hover"
+                app:starHalf="@drawable/star_half"
+                app:starImageHeight="18dp"
+                app:starImagePadding="2dp"
+                app:starImageWidth="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:text="投诉:"
+            android:textColor="#61a0ff"
+            android:textSize="24px" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rate"
+            android:layout_marginTop="15px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="160px"
+            android:layout_height="60px"
+            android:background="@drawable/button_queding"
+            android:text="确定"
+            android:textColor="@android:color/white"
+            android:textSize="24px" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="160px"
+            android:layout_height="60px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/button_fanhui"
+            android:text="返回"
+            android:textColor="@android:color/white"
+            android:textSize="24px" />
+    </LinearLayout>
+</LinearLayout>

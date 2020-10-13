@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.unccr.zclh.dsdps"
+    >
+
+<!--    android:sharedUserId="android.system.uid"-->
+
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 这个是限制安装权限，只给有nfc功能的手机安装(可选) -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <!-- 允许设置时区 -->
+    <uses-permission
+        android:name="android.permission.SET_TIME_ZONE"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 显示系统窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 在 屏幕最顶部显示addview -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MODIFY_APPWIDGET_BIND_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <application
+        android:name="com.unccr.zclh.dsdps.app.DsdpsApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:icon,android:label">
+
+        <activity
+            android:name="com.unccr.zclh.dsdps.play.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|screenLayout|mcc|mnc"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Blue_Bg">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.unccr.zclh.dsdps.setting.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|screenLayout|mcc|mnc"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name="com.unccr.zclh.dsdps.ProhibitActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|locale|screenLayout|mcc|mnc"
+            android:launchMode="singleTask" />
+
+        <service android:name="com.unccr.zclh.dsdps.service.SecondScreenService" />
+
+        <service android:name="com.unccr.zclh.dsdps.service.heart.HeartService" />
+
+        <service android:name="com.unccr.zclh.dsdps.download.ResposeDownloadService" />
+
+        <service android:name="com.unccr.zclh.dsdps.service.websocket.JWebSocketService" />
+
+        <service android:name="com.unccr.zclh.dsdps.download.RecoveryDownloadTaskService" />
+
+        <service android:name="com.unccr.zclh.dsdps.service.time.TimerSleepScreenService" />
+
+        <service
+            android:name=".service.process.RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":RemoteProcess" />
+        <service
+            android:name=".service.process.LocalService"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- U盘检测receiver -->
+        <!--        <receiver android:name="com.unccr.zclh.dsdps.receiver.UDiskCheckReceiver">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MEDIA_CHECKING" />-->
+        <!--                <action android:name="android.intent.action.MEDIA_MOUNTED" />-->
+        <!--                <action android:name="android.intent.action.MEDIA_EJECT" />-->
+        <!--                <action android:name="android.intent.action.MEDIA_REMOVED" />-->
+
+        <!--                <data android:scheme="file" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.BootBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.CancelDownloadReceiver">
+            <intent-filter>
+                <action android:name="com.sunchip.downloadservice.CANCEL_DOWNLOAD_LIST_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.DeletePrmReceiver">
+            <intent-filter>
+                <action android:name="com.sunchip.adw.dsdps.receive.NOTFIY_DELETE_PRM_ACTION" />
+                <action android:name="com.sunchip.ui.receive.REPORT_DELETE_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.SwitchPrmReceiver">
+            <intent-filter>
+                <action android:name="com.sunchip.ui.NOTIFY_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.UpdateAppReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.NetworkStateReceive">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.unccr.zclh.dsdps.receiver.ScreenshotReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.sunchip.aidlservice.action.SCREEN_SHOTS_ACTION" />
+                <action android:name="com.sunchip.action.UPLOAD_SCREENTSHOT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.unccr.zclh.dsdps.receiver.StopAppReceiver">
+            <intent-filter>
+                <action android:name="com.sunchip.adw.control.app.STOP_APP_ACTION" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.PACKAGE_REPLACED" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+</manifest>

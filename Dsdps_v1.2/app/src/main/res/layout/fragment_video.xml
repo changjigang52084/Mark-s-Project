@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_video_pic_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_color">
+
+  <ImageView
+      android:id="@+id/pre_img"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="fitXY"
+      android:visibility="gone" />
+
+  <ImageView
+      android:id="@+id/not_video_img"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="fitXY" />
+
+  <com.unccr.zclh.dsdps.fragment.view.VideoPlayView
+      android:id="@+id/fragment_video_screen"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
