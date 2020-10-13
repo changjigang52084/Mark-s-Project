@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="#FF2D47"
+    >
+    <ImageButton
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@mipmap/shape1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="礼物说"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/search"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/my_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/input_subtitle"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/my_content_administration_rl"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/my_content_administration_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow_left_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_back_rl"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/my_content_administration_rl">
+
+        <ImageView
+            android:id="@+id/my_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_left_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

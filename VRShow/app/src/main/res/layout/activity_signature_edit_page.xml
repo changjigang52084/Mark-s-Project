@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2">
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_name_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:id="@+id/my_information_modify_name_cancel_rl"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/my_information_modify_name_cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="取消"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/big_text_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_information_modify_username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="简介"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/my_information_modify_name_save_rl"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/my_information_modify_name_save_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:text="保存"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/big_text_size" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/my_information_modify_user_username_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_information_modify_name_bar_rl"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_edittext_fang"
+        android:gravity="left|top"
+        android:hint="我的简介……（50字内）"
+        android:lines="7"
+        android:maxLength="50"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/color_b3b3b3" />
+
+    <TextView
+        android:id="@+id/introduce_profile_enter_words_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/my_information_modify_user_username_et"
+        android:layout_marginBottom="@dimen/control_length_10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toLeftOf="@+id/introduce_profile_enter_words_number_tv_total"
+        android:text="50"
+        android:textColor="@color/color_000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/introduce_profile_enter_words_number_tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/my_information_modify_user_username_et"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/control_length_10dp"
+        android:layout_marginEnd="@dimen/control_length_20dp"
+        android:text="/ 50"
+        android:textColor="@color/color_000000" />
+
+
+</RelativeLayout>

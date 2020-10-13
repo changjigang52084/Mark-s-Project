@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name">VRSHOW</string>
+    <string name="Home">首页</string>
+    <string name="Movie">视频</string>
+    <string name="Game">游戏</string>
+    <string name="Person">我的</string>
+    <string name="fine">精品</string>
+    <string name="classify">分类</string>
+    <string name="SHOW">SHOW</string>
+    <string name="find">发现</string>
+    <string name="my">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">游戏碎片</string>
+    <string name="title_activity_img_cycle_view">ImgCycleView</string>
+    <string name="title_activity_image_cycle_view">ImageCycleView</string>
+    <string name="PanoramaShow">全景秀</string>
+    <string name="BeautyShow">美女秀</string>
+    <string name="MusicalShow">歌舞秀</string>
+    <string name="ThreeDimensionalShow">3D秀</string>
+    <string name="BeautyVideo">美女视频</string>
+    <string name="more_video">更多视频</string>
+    <string name="HotVideo">热门视频</string>
+    <string name="GameExplode">游戏大作</string>
+    <string name="BeautyTitleOne">美女一号</string>
+    <string name="BeautyTitleTwo">美女二号</string>
+    <string name="BeautyTitleThree">美女三号</string>
+    <string name="BeautyTitleFour">美女四号</string>
+    <string name="HotTitleOne">热门一号</string>
+    <string name="HotTitleTwo">热门二号</string>
+    <string name="HotTitleThree">热门三号</string>
+    <string name="HotTitleFour">热门四号</string>
+    <string name="GameTitleOne">游戏一号</string>
+    <string name="GameTitleTwo">游戏二号</string>
+    <string name="GameTitleThree">游戏三号</string>
+    <string name="GameTitleFour">游戏四号</string>
+    <string name="Register">注册</string>
+    <string name="Login">登录</string>
+    <string name="sign_out">退出登录</string>
+    <string name="MyFavorite">我的收藏</string>
+    <string name="MyDownloads">我的下载</string>
+    <string name="favorite">收藏</string>
+    <string name="downloads">下载</string>
+    <string name="share">分享</string>
+    <string name="detail">详情</string>
+    <string name="MySubscriptions">我的订阅</string>
+    <string name="PlayHistory">播放历史</string>
+    <string name="MyFeedback">我的反馈</string>
+    <string name="Setting">设置</string>
+    <string name="VersionUpgrade">版本升级</string>
+    <string name="ContactUs">联系我们</string>
+    <string name="SystemSettings">系统设置</string>
+    <string name="Disclaimer">免责声明</string>
+    <string name="InputTelephoneNumber">输入您的手机号</string>
+    <string name="InputVerificationCode">输入验证码</string>
+    <string name="InputPassword">输入6-18位密码</string>
+    <string name="TestGetCode">获取验证码</string>
+    <string name="ExistingAccount">已有账号?</string>
+    <string name="LoginImmediately">立即登录</string>
+    <string name="NonRegistered">尚未注册?</string>
+    <string name="RegisterNow">立即注册</string>
+    <string name="ForgetPassword">忘记密码</string>
+    <string name="InputSeconds">输入验证码的秒数</string>
+    <string name="register_validate_again">再一次验证</string>
+    <string name="send_validate_num_error">验证码发送失败</string>
+    <string name="user_existing">用户退出</string>
+    <string name="net_error">网络错误</string>
+    <string name="loading_net_error">网络加载失败</string>
+    <string name="hint_validate_error">验证码错误</string>
+    <string name="phone_cache">手机存储</string>
+    <string name="filter_file_little_2M">过滤掉本地小于2M的视频文件</string>
+    <string name="download_times">下载次数</string>
+    <string name="new_text">NEW TEXT</string>
+    <string name="Video">视频</string>
+    <string name="VideoDescribe">视频描述</string>
+    <string name="Downing">下载中</string>
+    <string name="HowM">100M</string>
+    <string name="CheckAll">全选</string>
+    <string name="Delete">删除</string>
+    <string name="NativeVideo">本地视频</string>
+    <string name="MyGame">我的游戏</string>
+    <string name="off_line_video">离线视频</string>
+    <string name="Classify">影视</string>
+    <string name="PanoramaVideo">全景视频</string>
+    <string name="HowBu">220部</string>
+    <string name="please_input_your_idea">请输入您的宝贵意见</string>
+    <string name="phone_email_QQ">手机/邮箱/QQ</string>
+    <string name="Commit">提交</string>
+    <string name="NewText">220部</string>
+    <string name="picture_miss">图片缺失</string>
+    <string name="hint_empty_feedback_info">请输入反馈信息</string>
+    <string name="hint_input_contact_style">请输入正确的联系方式</string>
+    <string name="new_user_registe">用户注册</string>
+    <string name="user_login">用户登录</string>
+    <string name="user_name">用户名:</string>
+    <string name="empty_content">即将开放，敬请期待!</string>
+    <string name="read_and_agree_user_protocol">我已阅读并同意</string>
+    <string name="user_protocol">用户协议</string>
+    <string name="read_user_protocol">请先阅读并同意用户协议</string>
+    <string name="test_version">(测试版本)</string>
+
+    <!-- hechuang -->
+    <string name="setting">设置</string>
+    <string name="allow_push">允许推送</string>
+    <string name="allow_network_cache">允许VRSHOW下发通知消息</string>
+    <string name="allow_auto_cache">允许非Wi-Fi环境中下载</string>
+    <string name="filter_file">过滤文件</string>
+    <string name="offline_cache_path">离线缓存路径</string>
+    <string name="check_update">检查更新</string>
+    <string name="internal_storage">内部存储</string>
+    <string name="sdcard_storage">外置SD卡存储</string>
+
+    <!-- 登录  注册  找回密码 -->
+    <string name="login_validate">用户名或者密码不能为空！</string>
+    <string name="login_title_sign_in">登录</string>
+    <string name="regist_title_text">注册</string>
+    <string name="login_phone_number">手机号码</string>
+    <string name="login_password">密码</string>
+    <string name="login_password_hint">6-18位密码，字母/数字/符号</string>
+    <string name="login_retrieve_password">忘记密码</string>
+    <string name="login_other_login">合作平台</string>
+    <string name="regist_get_validate_num">发送验证码</string>
+    <string name="regist_input_validate_num">请输入验证码</string>
+    <string name="regist_validate_again">重新发送</string>
+    <string name="send">发送</string>
+    <string name="regist_next">下一步</string>
+    <string name="set_new_password">设置新密码</string>
+    <string name="input_old_password">输入原密码</string>
+    <string name="input_password_again">请再次输入密码</string>
+    <string name="reset_password">重置密码</string>
+    <string name="edit_password">修改密码</string>
+    <string name="back_password_one">忘记密码</string>
+    <string name="back_password_two">找回密码(2/2)</string>
+    <string name="input_phonenum_validate">请先输入手机号填写验证码</string>
+    <!-- 提示语 -->
+    <string name="user_protocol_no_check">请认真阅读并勾选用户协议</string>
+    <string name="hint_input_phone_num">请输入正确的手机号</string>
+    <string name="hint_empty_phone_num">请输入手机号</string>
+    <string name="hint_long_username">请输入用户昵称</string>
+    <string name="usernick_no_emity">昵称不能为空</string>
+    <string name="hint_empty_password">请输入密码</string>
+    <string name="hint_input_old_password">请输入旧密码</string>
+    <string name="hint_long_password">请输入6-18位密码</string>
+    <string name="hint_password_limit">密码中不能有特殊字符或空格</string>
+    <string name="hint_nick_limit">不支持特殊字符</string>
+    <string name="hint_empty_validate">请输入验证码</string>
+    <string name="hint_netWork_fail">网络连接失败请检查网络</string>
+    <string name="hint_outnumber_12_text">超过12个字符</string>
+    <string name="hint_outnumber_25_text">超过25个字符</string>
+    <string name="reload">重新加载</string>
+    <string name="back_home">返回首页</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="log_out">退出登录</string>
+
+    <!-- 错误提示 -->
+    <string name="page_loading_failed">非常抱歉，页面加载失败</string>
+    <string name="page_empty_desc">这里什么也没有</string>
+
+
+    <!-- 下载相关 -->
+    <string name="my_downloads">我的下载</string>
+    <string name="down_load_text">下载</string>
+    <string name="file_download_count">%1$s 人下载</string>
+    <string name="downloads_tv">下载量：</string>
+    <string name="size_tv">大小：</string>
+    <string name="type_tv">类型：</string>
+
+    <!-- 播放器相关文字-->
+    <string name="media_play_soon">即将播放: %1$s</string>
+    <string name="media_play_error">播放错误 错误代码: %1$s</string>
+    <string name="media_immersion_model">沉浸模式</string>
+
+    <string name="customer_service">客服</string>
+    <string name="vrShow_customer">VRSHOW客服</string>
+    <string name="UserEmailRegister">使用邮箱注册</string>
+    <string name="UserPhoneRegister">使用手机注册</string>
+    <string name="UserEmailBack">使用邮箱找回</string>
+    <string name="UserPhoneBack">使用手机找回</string>
+    <string name="inputEmailNumber">输入您的邮箱号</string>
+    <string name="hint_empty_email_num">邮箱输入不能为空</string>
+    <string name="hint_input_email_num">请输入正确的邮箱号</string>
+    <string name="InputTelephoneNumberOrEmail">输入您的账号</string>
+    <string name="other_style_login">其他方式登录</string>
+    <string name="micro_blog_sina">新浪微博</string>
+    <string name="wechat">微信</string>
+    <string name="qq">QQ</string>
+    <!-- jpush start -->
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+    <!-- jpush end -->
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+    <string name="comment">评论</string>
+    <string name="more_text">还可以输入500字</string>
+    <string name="publish">发表</string>
+    <string name="all_comment">全部评论</string>
+    <string name="comment_count">%d条</string>
+    <string name="classify_more_comment_tv">更多评论</string>
+    <string name="please_login">亲！请登录先...</string>
+    <string name="login_button">前往登录！</string>
+    <string name="add_comment">添加评论</string>
+
+    <string name="input_subtitle">请输入副标题</string>
+    <string name="not_submitted">未提交</string>
+    <string name="audit">审核中</string>
+    <string name="audit_failed">审核失败</string>
+    <string name="create_content">创建内容</string>
+    <string name="temporary_storage_content">临时保存内容</string>
+    <string name="type">类型</string>
+    <string name="normal_video">普通视频</string>
+    <string name="title">标题</string>
+    <string name="input_text">输入文本...</string>
+    <string name="input_brief_introduction">输入简介...</string>
+    <string name="cover">封面</string>
+    <string name="photo_selection">拍照选取</string>
+    <string name="mobile_photo_album_selection">手机相册选取</string>
+    <string name="upload_content">上传内容</string>
+    <string name="submitted">提交</string>
+    <string name="save">保存</string>
+    <string name="brief_introduction">简介</string>
+    <string name="icon">头像</string>
+    <string name="background">背景</string>
+    <string name="name">名称</string>
+    <string name="gender">性别</string>
+    <string name="region">地区</string>
+    <string name="autograph">签名</string>
+    <string name="account">账户</string>
+
+    
+    <!--  my -->
+    <string name="user_content">内容</string>
+    <string name="user_attention">关注</string>
+    <string name="user_fans">粉丝</string>
+    <string name="user_compilations">合集</string>
+    <string name="user_activity">活动</string>
+    
+    <string name="user_leave_a_message">留言  : </string>
+    <string name="user_vitality">人气  : </string>
+    <string name="user_lv_text">LV:</string>
+
+    <string name="user_num_format">(%1$d)</string>
+    <string name="his_content">他的内容</string>
+    <string name="personal_homepage">个人主页</string>
+
+    <string name="user_label_my_compilations">我的合集</string>
+    <string name="user_label_my_activity">我的活动</string>
+    <string name="user_label_my_collection">我的收藏</string>
+    <string name="user_label_watched">观看历史</string>
+    <string name="user_label_share_content">分享内容</string>
+    <string name="user_label_my_comment">我的评论</string>
+    <string name="user_label_my_download">我的下载</string>
+    <string name="user_label_local_video">本地视频</string>
+    <string name="user_label_my_service">我的客服</string>
+    <string name="user_label_my_setting">设置</string>
+
+    <!-- 城市列表-->
+    <string name="locating">定位中</string>
+    <string name="search">搜索</string>
+    <string name="notfound">抱歉，未找到！</string>
+    <string name="key_word">请输入关键字</string>
+    <string name="locatez_as">定位为</string>
+    <string name="switch_ornot">，是否切换？</string>
+    <string name="city_show_text_hot">热门城市</string>
+    <string name="city_hotcity_curlocationcity_text">定位城市</string>
+    <string name="third_title_close">关闭</string>
+    <string name="city_hotcity_searchedittext_hint">请输入城市名,首字母或拼音</string>
+    <string name="xml_loading_01">加载中</string>
+    <string name="quit_dialog_cancel">取 消</string>
+    <string name="assistant_upload_dialog_title">提示</string>
+    <string name="allow_auto_play">允许非Wi-Fi环境中播放</string>
+    <string name="input_type_name">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.</string>
+    <!--后台已确定运行-->
+    <string name="input_type_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^\&amp;*()_-+={[}]|\'&quot;&lt;&gt;:;,.\>\/?</string>
+</resources>

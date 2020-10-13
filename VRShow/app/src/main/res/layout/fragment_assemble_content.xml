@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_layout_blue_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/my_assemble_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000">
+
+        <ImageButton
+            android:id="@+id/title_left_back_iv"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/color_transparent"
+            android:src="@drawable/arrow_left_white" />
+
+
+        <TextView
+            android:id="@+id/title_right_function_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/c_text_big_white"
+            android:textSize="@dimen/big_text_size" />
+
+        <TextView
+            android:id="@+id/title_center_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="80dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/c_text_big_white"
+            android:textSize="@dimen/big_text_size" />
+    </RelativeLayout>
+
+
+    <com.hch.viewlib.widget.PullToRefreshRecyclerView
+        android:id="@+id/my_assemble_content_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_assemble_top_rl"
+        android:listSelector="@color/color_transparent"
+        android:divider="@color/c_layout_blue_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <include
+        layout="@layout/public_item_net_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_assemble_top_rl"
+        android:visibility="gone" />
+
+
+    <include
+        layout="@layout/public_item_net_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_assemble_top_rl"
+        android:visibility="gone" />
+
+</RelativeLayout>

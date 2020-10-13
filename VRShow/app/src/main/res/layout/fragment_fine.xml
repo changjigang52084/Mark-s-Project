@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/c_layout_blue_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fine_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="精品"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_text_size"
+            />
+    </RelativeLayout>
+
+
+    <com.hch.viewlib.widget.PullToRefreshRecyclerView
+        android:id="@+id/fragment_fine_recycler_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fine_top_rl"
+        android:listSelector="@color/color_transparent"
+        android:scrollbars="none"/>
+
+    <include
+        android:id="@+id/fragment_fine_empty_rl"
+        layout="@layout/public_item_net_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fine_top_rl"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/fragment_fine_net_fail"
+        layout="@layout/public_item_net_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fine_top_rl"
+        android:visibility="gone" />
+
+</RelativeLayout>

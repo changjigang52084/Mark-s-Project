@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2">
+
+    <RelativeLayout
+        android:id="@+id/committed_message_layout_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000">
+
+        <TextView
+            android:id="@+id/committed_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="留言"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/committed_message_cancel_iv"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/classify_comment_cancel" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/committed_message_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/committed_message_layout_title_rl"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_edittext_fang"
+        android:gravity="left|top"
+        android:hint="我的留言……（300字内）"
+        android:lines="7"
+        android:maxLength="300"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/color_b3b3b3" />
+
+    <TextView
+        android:id="@+id/message_enter_words_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/committed_message_content_et"
+        android:layout_marginBottom="@dimen/control_length_10dp"
+        android:layout_marginEnd="10dp"
+        android:text=""
+        android:textColor="@color/color_000000"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/committed_message_content_send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_enter_words_number_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rect_round_button"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/send"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

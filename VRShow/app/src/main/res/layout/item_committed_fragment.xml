@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/item_committed_fragment_image_iv"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/item_committed_fragment_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_committed_fragment_image_iv"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/item_committed_fragment_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_committed_fragment_has_upload_size_tv"
+        android:layout_below="@+id/item_committed_fragment_title_tv"
+        android:layout_toRightOf="@+id/item_committed_fragment_image_iv"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:text="已暂停"
+        android:textColor="@color/color_b3b3b3" />
+
+    <ImageView
+        android:id="@+id/item_committed_fragment_vertical_line_iv"
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/item_committed_fragment_title_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/item_committed_fragment_status_tv"
+        android:background="@color/color_b3b3b3" />
+
+    <TextView
+        android:id="@+id/item_committed_fragment_has_upload_size_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_committed_fragment_title_tv"
+        android:layout_toRightOf="@+id/item_committed_fragment_vertical_line_iv"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:text="22M"
+        android:textColor="@color/color_1b96ff" />
+
+    <TextView
+        android:id="@+id/item_committed_fragment_total_size_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_committed_fragment_title_tv"
+        android:layout_toRightOf="@+id/item_committed_fragment_has_upload_size_tv"
+        android:paddingLeft="1dp"
+        android:paddingTop="8dp"
+        android:text="/127M"
+        android:textColor="@color/color_b3b3b3" />
+
+    <ProgressBar
+        android:id="@+id/item_committed_fragment_progress_pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/item_committed_fragment_image_iv"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/item_committed_fragment_image_iv"
+        android:max="100"
+        android:progress="0" />
+
+</RelativeLayout>

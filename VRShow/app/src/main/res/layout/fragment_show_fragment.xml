@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:id="@+id/show_fragment_tab_sroll_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:focusableInTouchMode="true"
+            android:scrollbarFadeDuration="0"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/show_fragment_tab_manage_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"/>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/show_page_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

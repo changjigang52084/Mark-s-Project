@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_layout_blue_bg">
+
+    <RelativeLayout
+        android:id="@+id/info_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Person"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_text_size" />
+    </RelativeLayout>
+
+    <com.hch.viewlib.widget.PullToRefreshScrollView
+        android:id="@+id/home_user_pull_to_refresh_sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/info_title_rl"
+        android:fadingEdge="vertical"
+        android:listSelector="@color/color_transparent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/c_layout_blue_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/home_user_title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/my_fragment_unLogin_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.hch.viewlib.widget.view.CircleImageView
+                        android:id="@+id/home_user_icon_civ_unLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/unregistered_status" />
+
+                    <TextView
+                        android:id="@+id/my_fragment_line_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_user_icon_civ_unLogin"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/c_text_middle_gray"
+                        android:text="/"
+                        android:textSize="@dimen/big_text_size" />
+
+                    <TextView
+                        android:id="@+id/my_fragment_login_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_user_icon_civ_unLogin"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toStartOf="@+id/my_fragment_line_tv"
+                        android:text="登录"
+                        android:textColor="@color/c_text_middle_gray"
+                        android:textSize="@dimen/big_text_size" />
+
+                    <TextView
+                        android:id="@+id/my_fragment_register_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_user_icon_civ_unLogin"
+                        android:layout_toEndOf="@+id/my_fragment_line_tv"
+                        android:textColor="@color/c_text_middle_gray"
+                        android:text="注册"
+                        android:textSize="@dimen/big_text_size"  />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_fragment_login_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:visibility="visible">
+
+                    <com.hch.viewlib.widget.view.CircleImageView
+                        android:id="@+id/home_user_icon_civ"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/registered_status" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingTop="10dp"
+                        android:background="@drawable/user_icon_bg_circle"/>
+
+                    <RelativeLayout
+                        android:id="@+id/my_fragment_progressbar_name_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/home_user_icon_civ"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:paddingTop="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/my_fragment_progressbar_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/user_lv_title_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:paddingEnd="0dp"
+                                android:paddingStart="2dp"
+                                android:textColor="@color/c_text_middle_gray"
+                                android:textSize="@dimen/middle_text_size"/>
+
+                            <ProgressBar
+                                android:id="@+id/user_lv_progress_pb"
+                                style="@style/StyleProgressBarMini"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/shape_progressbar_bg"
+                                android:max="100"
+                                android:visibility="gone"
+                                android:progress="50" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/my_fragment_progressbar_rl"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/my_fragment_username_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/c_text_middle_gray"
+                                android:maxLines="1"
+                                android:textSize="@dimen/middle_text_size"/>
+
+                            <TextView
+                                android:id="@+id/my_fragment_brief_introduction_content_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/my_fragment_username_tv"
+                                android:textColor="@color/c_text_small_gray"
+                                android:maxLines="3"
+                                android:ellipsize="end"
+                                android:textSize="@dimen/middle_text_size" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/home_user_icon_civ">
+
+                        <TextView
+                            android:id="@+id/user_vitality_tv"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:paddingTop="20dp"
+                            android:gravity="start|bottom"
+                            android:layout_height="wrap_content"
+                            android:text="@string/user_vitality"
+                            android:textColor="@color/c_text_middle_gray"
+                            android:enabled="false"
+                            android:textSize="@dimen/middle_text_size" />
+
+                            <TextView
+                                android:id="@+id/user_leave_a_message_tv"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:paddingTop="20dp"
+                                android:gravity="end|bottom"
+                                android:layout_height="wrap_content"
+                                android:background="@color/color_transparent"
+                                android:text="@string/user_leave_a_message"
+                                android:textColor="@color/c_text_big_blue"
+                                android:textSize="@dimen/middle_text_size" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_fragment_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/my_fragment_user_equal_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/user_equal_content_rl"
+                        layout="@layout/user_item_equal_label" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/c_layout_blue_bg" />
+
+                    <include
+                        android:id="@+id/user_equal_follow_rl"
+                        layout="@layout/user_item_equal_label" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/c_layout_blue_bg" />
+
+                    <include
+                        android:id="@+id/user_equal_fans_rl"
+                        layout="@layout/user_item_equal_label" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/my_fragment_choice_video_date_separation_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/my_fragment_user_equal_ll"
+                    android:background="@color/c_layout_blue_bg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/my_fragment_choice_video_date_separation_line"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/user_linear_my_compilations_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                    <include
+                        android:id="@+id/user_linear_my_activity_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                    <include
+                        android:id="@+id/user_linear_my_collection_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                    <include
+                        android:id="@+id/user_linear_watched_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                    <include
+                        android:id="@+id/user_linear_share_content_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                    <include
+                        android:id="@+id/user_linear_my_comment_rl"
+                        layout="@layout/user_item_linear_label"/>
+
+                    <include
+                        android:id="@+id/user_linear_my_download_rl"
+                        layout="@layout/user_item_linear_label" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/user_linear_local_video_rl"
+                    layout="@layout/user_item_linear_label" />
+
+                <include
+                    android:id="@+id/user_linear_my_service_rl"
+                    layout="@layout/user_item_linear_label" />
+
+                <include
+                    android:id="@+id/user_linear_my_setting_rl"
+                    layout="@layout/user_item_linear_label" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.hch.viewlib.widget.PullToRefreshScrollView>
+</RelativeLayout>

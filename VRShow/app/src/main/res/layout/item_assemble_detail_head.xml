@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/assemble_content_head_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="5dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:layout_collapseMode="parallax">
+
+        <ImageView
+            android:id="@+id/assemble_content_cover_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/assemble_content_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/assemble_content_cover_iv"
+            android:background="@color/color_ffffff"
+            android:textSize="@dimen/middle_text_size"
+            android:textColor="@color/c_text_middle_gray"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_below="@id/assemble_content_head_rl"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="10dp"
+            android:text="合集内容"
+            android:textSize="@dimen/big_text_size"
+            android:textColor="@color/c_text_middle_gray"/>
+    </LinearLayout>
+
+</RelativeLayout>

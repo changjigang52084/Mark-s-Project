@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000">
+
+        <ImageView
+            android:id="@+id/back_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_left_white"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/picture_miss" />
+
+        <TextView
+            android:id="@+id/web_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="80dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_rl"
+        android:progressDrawable="@drawable/progressbar_color"
+        android:visibility="visible" />
+
+    <WebView
+        android:id="@+id/home_label_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar" />
+
+    <RelativeLayout
+        android:id="@+id/webview_loading_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_rl"
+        android:background="@color/c_layout_blue_bg">
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/webview_loading_round_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@drawable/webview_round_bg" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/webview_loading_center_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@drawable/webview_center_bg"-->
+            <!--android:scaleType="center" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

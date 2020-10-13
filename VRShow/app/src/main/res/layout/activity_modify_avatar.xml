@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_avatar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000">
+
+        <RelativeLayout
+            android:id="@+id/my_back_rl"
+            android:layout_width="100dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/my_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrow_left_white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/input_subtitle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+        <RelativeLayout
+            android:id="@+id/my_content_administration_rl"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/my_content_administration_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/my_choice_photo" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_information_personal_avatar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_information_modify_avatar_rl"
+        android:background="@color/color_000">
+
+        <ImageView
+            android:id="@+id/my_information_personal_avatar_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_information_bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/color_000000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/my_information_cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="20dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="30dp"
+            android:text="取消"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/my_information_sure_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="20dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:paddingTop="30dp"
+            android:text="选取"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+</RelativeLayout>

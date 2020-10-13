@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <include
+        android:id="@+id/my_message_include"
+        layout="@layout/subtitle_header_tag" />
+
+    <com.hch.viewlib.widget.PullToRefreshListView
+        android:id="@+id/my_message_ptrlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/classify_push_comment_iv_rl"
+        android:layout_below="@+id/my_message_include"
+        android:listSelector="@color/color_transparent"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_message_include">
+
+        <include
+            layout="@layout/public_item_net_fail"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/public_item_net_empty"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/classify_push_comment_iv_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/my_message_ptrlv_separation_line_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_e6e6e6" />
+
+        <LinearLayout
+            android:id="@+id/classify_push_comment_iv_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/classify_push_comment_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.9"
+                android:background="@drawable/classify_add_comment_icon" />
+
+            <ImageView
+                android:id="@+id/classify_defult_icon_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:src="@drawable/classify_defult_icon" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

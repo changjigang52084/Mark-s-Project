@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_layout_blue_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fragment_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/c_layout_black_bg">
+
+        <ImageButton
+            android:id="@+id/title_left_back_iv"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/color_transparent"
+            android:src="@drawable/arrow_left_white" />
+
+        <TextView
+            android:id="@+id/title_center_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/big_text_size"
+            android:textColor="@color/c_text_big_white" />
+
+        <Button
+            android:id="@+id/edit_assemble_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/color_transparent"
+            android:drawableStart="@drawable/search"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/edit_assemble_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="确定"
+        android:background="@color/c_text_big_blue"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="@color/c_text_big_white"/>
+
+     <com.hch.viewlib.widget.PullToRefreshRecyclerView
+        android:id="@+id/my_all_content_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_top_rl"
+         android:layout_above="@id/edit_assemble_submit_btn"
+         />
+
+
+    <RelativeLayout
+        android:id="@+id/edit_assemble_search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bocop_dialog_bg"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/edit_assemble_search_head_rl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/c_layout_black_bg">
+            <RelativeLayout
+                android:id="@+id/edit_assemble_search_edit_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/c_layout_blue_bg">
+                <ImageView
+                    android:id="@+id/edit_assemble_search_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/search_selection_state"/>
+
+                <EditText
+                    android:id="@+id/edit_assemble_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/edit_assemble_search_image"
+                    android:hint="请输入搜索内容..."
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:maxLines="1"
+                    android:textSize="@dimen/middle_text_size"
+                    android:textColorHint="@color/c_text_small_gray"
+                    android:imeOptions="actionSearch"
+                    android:background="@color/c_text_big_white"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/edit_assemble_search_close_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_text_big_white"
+                android:textSize="@dimen/big_text_size"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="关闭"
+                />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/edit_assemble_search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/edit_assemble_search_head_rl"/>
+
+    </RelativeLayout>
+
+    <include layout = "@layout/public_item_net_empty"
+        android:id="@+id/my_assemble_empty_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_top_rl"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/public_item_net_fail"
+        android:id="@+id/my_assemble_net_fail_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_top_rl"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

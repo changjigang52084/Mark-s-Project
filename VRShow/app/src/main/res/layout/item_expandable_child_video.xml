@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c_layout_white_bg">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c_layout_blue_bg"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:id="@+id/public_video_item_zan_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/public_video_item_zan_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/classify_detail_zan_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/public_video_item_zan_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:id="@+id/public_video_item_zan_add_one_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/classify_detail_video_zan_num_tv"
+                    android:text="+1"
+                    android:textColor="@color/color_ff4081"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/public_video_item_download_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/public_video_item_download_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/classify_detail_download_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="@string/downloads" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/public_video_item_share_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/public_video_item_share_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/classify_detail_share_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="@string/share" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/public_video_item_collect_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/public_video_item_collect_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/classify_detail_collect_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="@string/favorite" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/public_video_item_detail_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/public_video_item_detail_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/detail_resource_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="@string/detail" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

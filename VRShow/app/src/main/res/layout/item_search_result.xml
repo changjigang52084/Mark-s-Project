@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/item_search_result_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_search_result_image_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_defult_icon" />
+
+        <TextView
+            android:id="@+id/item_search_result_title_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/item_search_result_more_operation_iv"
+            android:layout_toRightOf="@+id/item_search_result_image_iv"
+            android:text="美丽风景"
+            android:ellipsize="end"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/item_search_result_subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_search_result_image_iv"
+            android:text="播放次数："
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/item_search_result_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2016-03-16 18:38:37"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12"
+            android:layout_alignBottom="@+id/item_search_result_image_iv"
+            android:layout_toEndOf="@+id/item_search_result_image_iv" />
+
+        <ImageView
+            android:id="@+id/item_search_result_more_operation_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_size_10"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_right" />
+
+    </RelativeLayout>
+
+</LinearLayout>

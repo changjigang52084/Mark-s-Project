@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/c_layout_blue_bg">
+
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/fragment_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_000000">
+
+        <TextView
+            android:id="@+id/title_center_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/big_text_size"
+            android:textColor="@color/c_text_big_white" />
+
+        <Button
+            android:id="@+id/add_assemble_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/color_transparent"
+            android:drawableLeft="@drawable/close"
+            android:paddingEnd="10dp" />
+    </RelativeLayout>
+
+    <!--头部错误提示-->
+    <RelativeLayout
+        android:id="@+id/add_assemble_action_fail_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/c_layout_blue_ah"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/add_assemble_action_fail_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/public_action_fail_icon" />
+
+        <TextView
+            android:id="@+id/add_assemble_action_fail_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/add_assemble_action_fail_iv"
+            android:textColor="@color/c_text_big_white"
+            android:textSize="@dimen/small_text_size"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_assemble_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="提交"
+        android:background="@color/c_text_big_blue"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="@color/c_text_big_white" />
+
+    <com.hch.viewlib.widget.PullToRefreshRecyclerView
+        android:id="@+id/add_assemble_content_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_top_rl"
+        android:layout_above="@id/add_assemble_submit_btn"
+        android:divider="@color/c_layout_blue_bg"
+        android:listSelector="@color/color_transparent"
+        android:scrollbars="none"/>
+
+</RelativeLayout>

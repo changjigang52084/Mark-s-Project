@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <include
+        android:id="@+id/my_information_user_count_include"
+        layout="@layout/subtitle_header_tag" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="18dp"
+        android:text="用户账户页面暂为空，程序员正在努力开发当中……"
+        android:textColor="@color/color_00cc00"
+        android:textSize="18sp" />
+
+</RelativeLayout>

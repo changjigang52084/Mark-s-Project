@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/customer_dialog_upload_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/customer_dialog_progress_pb"
+        android:layout_centerHorizontal="true"
+        android:text="正在上传……" />
+
+    <ProgressBar
+        android:id="@+id/customer_dialog_progress_pb"
+        style="@style/StyleProgressBarMini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_progressbar_bg"
+        android:max="100"
+        android:progress="65" />
+
+    <TextView
+        android:id="@+id/customer_dialog_percent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customer_dialog_progress_pb"
+        android:layout_centerHorizontal="true"
+        android:text="65%" />
+
+    <Button
+        android:id="@+id/customer_dialog_cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/customer_dialog_percent_tv"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_00cdd0"
+        android:text="取消"
+        android:textColor="@color/color_ffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

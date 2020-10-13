@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_layout_blue_bg">
+
+    <RelativeLayout
+        android:id="@+id/info_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_000000"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/personal_homepage"
+            android:textColor="@color/c_text_big_white"
+            android:textSize="@dimen/big_text_size" />
+
+        <ImageView
+            android:id="@+id/info_personal_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/arrow_left_white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/main_top_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_title_rl"
+        android:background="@drawable/main_top_line"
+        android:visibility="gone"
+        android:scaleType="fitXY" />
+
+    <com.hch.viewlib.widget.PullToRefreshRecyclerView
+        android:layout_below="@id/info_title_rl"
+        android:id="@+id/homepage_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/c_layout_blue_bg"
+        />
+</RelativeLayout>

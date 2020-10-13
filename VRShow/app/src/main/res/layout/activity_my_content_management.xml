@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/my_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000">
+
+        <RelativeLayout
+            android:id="@+id/my_content_back_rl"
+            android:layout_width="100dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/my_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrow_left_white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/input_subtitle"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_text_size" />
+
+        <TextView
+            android:id="@+id/my_content_create_content_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="创建内容"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/big_text_size" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/content_manage_bar_include"
+        layout="@layout/content_manage_icon_bar" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/content_manage_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

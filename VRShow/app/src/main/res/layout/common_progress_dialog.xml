@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/color_ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/customer_dialog_upload_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="正在上传……"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/customer_dialog_progress_pb"
+            style="@style/StyleProgressBarMini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_dialog_upload_tv"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_progressbar_bg"
+            android:max="100"
+            android:progress="65" />
+
+        <TextView
+            android:id="@+id/customer_dialog_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_dialog_progress_pb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="65%"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/customer_dialog_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/customer_dialog_percent_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_00cdd0"
+            android:text="取消"
+            android:textColor="@color/color_ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/customer_dialog_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/customer_dialog_cancel_btn"
+            android:layout_alignTop="@+id/customer_dialog_percent_tv"
+            android:text="00.00M/00.00M"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e3e3e3">
+
+    <include
+        android:id="@+id/my_information_modify_gender_include"
+        layout="@layout/subtitle_header_tag" />
+
+    <ImageView
+        android:id="@+id/my_information_modify_gender_iv_separation_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/my_information_modify_gender_include"
+        android:background="@color/color_e3e3e3" />
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_gender_male_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/my_information_modify_gender_iv_separation_line_iv"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/my_information_modify_gender_male_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="男"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/my_information_modify_gender_male_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/my_information_modify_gender_male_iv_separation_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/my_information_modify_gender_male_rl"
+        android:background="@color/color_e3e3e3" />
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_gender_female_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/my_information_modify_gender_male_iv_separation_line_iv"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/my_information_modify_gender_female_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="女"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/my_information_modify_gender_female_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

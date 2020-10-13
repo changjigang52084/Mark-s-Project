@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--封面-->
+    <RelativeLayout
+        android:id="@+id/add_assemble_cover_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/c_layout_white_bg">
+        <ImageView
+            android:id="@+id/add_assemble_cover_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+
+        <RelativeLayout
+            android:id="@+id/add_assemble_add_cover_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/color_transparent">
+
+            <ImageView
+                android:id="@+id/add_assemble_cover_default_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cover_empty_image" />
+
+            <TextView
+                android:id="@+id/add_assemble_add_cover_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_assemble_cover_default_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/c_text_middle_gray"
+                android:textSize="@dimen/middle_text_size"
+                android:text="添加封面" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_assemble_edit_cover_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/color_transparent"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/add_assemble_edit_cover_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_e3e3e3"
+                android:textSize="@dimen/text_size_14"
+                android:text="编辑封面" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/add_assemble_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_assemble_cover_rl"
+        android:layout_marginTop="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/add_assemble_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="标题："
+            android:textColor="@color/c_text_middle_gray"
+            android:textSize="@dimen/middle_text_size"/>
+
+        <EditText
+            android:id="@+id/add_assemble_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/add_assemble_title_tv"
+            android:background="@color/color_transparent"
+            android:gravity="start|center"
+            android:hint="输入文本..."
+            android:padding="2dp"
+            android:textColor="@color/c_text_middle_gray"
+            android:textSize="@dimen/middle_text_size"
+            android:textColorHint="@color/c_text_small_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_assemble_desc_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/add_assemble_title_rl"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/add_assemble_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start|top"
+            android:text="简介："
+            android:layout_marginTop="2dp"
+            android:textColor="@color/c_text_middle_gray"
+            android:textSize="@dimen/middle_text_size"/>
+
+        <EditText
+            android:id="@+id/add_assemble_desc_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/add_assemble_desc_tv"
+            android:background="@color/color_transparent"
+            android:gravity="start|center"
+            android:padding="2dp"
+            android:hint="输入简介..."
+            android:textColor="@color/c_text_middle_gray"
+            android:textSize="@dimen/middle_text_size"
+            android:textColorHint="@color/c_text_small_gray" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/add_assemble_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/add_assemble_desc_rl"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/add_assemble_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="选择合集内容"
+            android:textColor="@color/c_text_middle_gray"
+            android:textSize="@dimen/big_text_size"/>
+
+        <ImageView
+            android:id="@+id/add_assemble_content_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/public_item_net_fail"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/public_item_net_empty"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    <com.hch.viewlib.widget.PullToRefreshListView
+        android:id="@+id/audit_failed_ptrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/color_transparent"
+        android:divider="@color/color_e6e6e6"
+        android:dividerHeight="5dp"
+        android:scrollbars="none" />
+</RelativeLayout>

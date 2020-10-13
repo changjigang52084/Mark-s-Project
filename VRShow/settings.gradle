@@ -1,0 +1,7 @@
+rootProject.name='The first line of code, Third Edition'
+include ':app'
+include ':app:okhttputils'
+include ':app:viewlib'
+include ':app:mediaplayer'
+include ':app:library'
+include ':app:mytest'

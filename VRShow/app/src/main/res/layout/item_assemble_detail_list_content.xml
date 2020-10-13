@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:listSelector="@color/color_transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/assemble_detail_list_item_icon_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_defult_icon_small"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/assemble_detail_list_center_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/assemble_detail_list_item_icon_iv"
+        android:background="@color/c_layout_white_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/assemble_detail_list_bottom_text_left_ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/assemble_detail_list_bottom_text_one_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/c_text_middle_gray"
+                        android:textSize="@dimen/middle_text_size" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/assemble_detail_list_bottom_text_two_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/c_text_small_gray"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

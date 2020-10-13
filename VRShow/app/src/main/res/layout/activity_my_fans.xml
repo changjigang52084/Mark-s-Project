@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <include
+        android:id="@+id/my_fans_include"
+        layout="@layout/subtitle_header_tag" />
+
+    <com.hch.viewlib.widget.PullToRefreshListView
+        android:id="@+id/my_fans_content_ptrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_fans_include"
+        android:listSelector="@color/color_transparent"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_fans_include">
+
+        <include
+            layout="@layout/public_item_net_fail"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/public_item_net_empty"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

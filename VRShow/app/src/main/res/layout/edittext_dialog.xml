@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/edit_dialog_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_defult_icon_small"/>
+        <TextView
+            android:id="@+id/edit_dialog_title_text_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/public_action_fail_icon"
+            android:text="  提示：标题已存在"
+            android:paddingStart="10dp"
+            android:textColor="@color/color_ffffff"
+            android:background="@color/c_layout_blue_ah"
+            android:alpha="0.8"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题："
+            android:textColor="@color/color_000"
+            android:textSize="@dimen/text_size_16"/>
+        <EditText
+            android:id="@+id/edit_dialog_text_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:textColor="@color/color_000"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/edit_dialog_view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_d3d3d3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/edit_dialog_ok_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/hint_button_bg_selector"
+            android:text="@string/ok"
+            android:textColor="@color/color_000"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+</LinearLayout>

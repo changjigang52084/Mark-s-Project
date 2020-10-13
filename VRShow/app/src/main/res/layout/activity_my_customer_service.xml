@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_e6e6e6">
+
+    <RelativeLayout
+        android:id="@+id/main_vrShow_customer_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_000000"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/main_vrShow_customer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/vrShow_customer"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/main_vrShow_customer_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/main_customer_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/custom_send_message_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/custom_send_message_defult_icon_rl"
+            android:background="@drawable/main_customer_send_message_box"
+            android:gravity="left|center_vertical"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="5"
+            android:scrollHorizontally="false"
+            android:textSize="@dimen/text_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/custom_send_message_defult_icon_rl"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/custom_send_rl">
+
+            <com.hch.viewlib.widget.view.CircleImageView
+                android:id="@+id/custom_send_message_defult_icon_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/registered_status" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/user_icon_bg_circle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/custom_send_rl"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/custom_send_massage_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="发送"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/text_size_14" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/customer_message_listview_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send_layout_rl"
+        android:layout_below="@+id/main_vrShow_customer_rl"
+        android:cacheColorHint="@color/color_00000000"
+        android:divider="@color/color_transparent"
+        android:dividerHeight="5dp"
+        android:listSelector="@color/color_transparent"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+    <!--<ImageView-->
+    <!--android:id="@+id/main_top_line_iv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/main_vrShow_customer_sl"-->
+    <!--android:background="@drawable/main_top_line"-->
+    <!--android:scaleType="fitXY" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/Linear"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@color/color_ffffff">-->
+
+    <!--<View-->
+    <!--android:id="@+id/view7"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:background="@color/color_e6e6e6" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/view7"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="10dp">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/custom_send_message_et"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:textSize="@dimen/text_size_14"-->
+    <!--android:layout_toLeftOf="@+id/custom_send_message_defult_icon_rl"-->
+    <!--android:background="@drawable/main_customer_send_message_box"-->
+    <!--android:gravity="left|center_vertical"-->
+    <!--android:maxLines="5"-->
+    <!--android:inputType="textMultiLine|textCapSentences"-->
+    <!--android:scrollHorizontally="false" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/custom_send_message_defult_icon_rl"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_toLeftOf="@+id/custom_send_rl">-->
+
+    <!--<com.hch.viewlib.widget.view.CircleImageView-->
+    <!--android:id="@+id/custom_send_message_defult_icon_iv"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:src="@drawable/registered_status" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/user_icon_bg_circle" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/custom_send_rl"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="35dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:background="@drawable/custom_send_massage_background">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="发送"-->
+    <!--android:textColor="@color/color_ffffff"-->
+    <!--android:textSize="@dimen/text_size_14" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/Linear"-->
+    <!--android:layout_below="@+id/main_vrShow_customer_rl">-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

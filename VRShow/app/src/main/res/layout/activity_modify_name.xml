@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_name_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:id="@+id/my_information_modify_name_cancel_rl"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/my_information_modify_name_cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="取消"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/middle_text_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_information_modify_username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="名称"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/middle_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/my_information_modify_name_save_rl"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/my_information_modify_name_save_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:text="保存"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/middle_text_size" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_information_modify_username_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_information_modify_name_bar_rl"
+        android:background="@color/color_e3e3e3">
+
+        <TextView
+            android:id="@+id/username_only_modify_once_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="*用户名只能修改一次"
+            android:textColor="@color/color_00cdd0"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:id="@+id/my_information_modify_name_separation_line_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/username_only_modify_once_tv"
+            android:background="@color/color_e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/my_information_modify_user_username_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/my_information_modify_name_separation_line_iv"
+            android:background="@color/color_ffffff">
+
+            <EditText
+                android:id="@+id/my_information_modify_user_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@color/color_transparent"
+                android:maxLength="20"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/color_000"
+                android:textSize="@dimen/middle_text_size" />
+
+            <TextView
+                android:id="@+id/introduce_profile_enter_words_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/my_information_modify_user_username_et"
+                android:layout_marginBottom="@dimen/control_length_10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toLeftOf="@+id/introduce_profile_enter_words_number_tv_total"
+                android:text="20"
+                android:textColor="@color/color_000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/introduce_profile_enter_words_number_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/my_information_modify_user_username_et"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/control_length_10dp"
+                android:layout_marginEnd="@dimen/control_length_10dp"
+                android:text="/ 20"
+                android:textColor="@color/color_000000" />
+
+            <ImageView
+                android:id="@+id/my_information_modify_username_cancel_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/name_clean"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/my_information_modify_user_username_rl"
+            android:background="@color/color_dfdfdf" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_page_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="选择你感兴趣的内容"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/image_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/terrorist_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/terrorist_selector"
+        android:onClick="image1"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/science_fiction_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/science_fiction_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/fashion_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/fashion_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/beauty_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/beauty_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/movement_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/movement_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tourism_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tourism_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/comi_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/comi_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/dance_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dance_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/funny_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/funny_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/literary_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/literary_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/music_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/music_selector"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/plot_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/plot_selector"
+        android:visibility="gone" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/change_tv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="60dp"-->
+        <!--android:text="换一批"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="18sp" />-->
+    <TextView
+        android:id="@+id/goto_home_tv"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="立即体验"
+        android:background="@drawable/comein_bg"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_18" />
+    <TextView
+        android:id="@+id/change_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="换一批"
+        android:drawableTop="@drawable/change_label"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

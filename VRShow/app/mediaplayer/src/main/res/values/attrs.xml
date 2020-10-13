@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VRVideoView">
+        <attr name="render_type">
+            <enum name="surface" value="1" />
+            <enum name="texture" value="2" />
+            <enum name="gl_surface" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_ffffff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/not_submitted_fragment_empty_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/not_submitted_empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="未提交界面，啥都没有……"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.hch.viewlib.widget.PullToRefreshListView
+        android:id="@+id/not_submitted_fragment_ptrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+</RelativeLayout>

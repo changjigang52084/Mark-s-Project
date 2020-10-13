@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6"
+    android:orientation="vertical">
+
+    <!--<include-->
+        <!--layout="@layout/public_item_net_fail"-->
+        <!--android:visibility="gone" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000000"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/classify_fragment_tab_search_ib"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/color_transparent"
+            android:src="@drawable/search" />
+
+        <HorizontalScrollView
+            android:id="@+id/classify_fragment_tab_sroll_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/classify_fragment_tab_search_ib"
+            android:focusableInTouchMode="true"
+            android:scrollbarFadeDuration="0"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/classify_fragment_tab_manage_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/find_fragment_page_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

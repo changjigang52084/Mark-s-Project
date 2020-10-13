@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <LinearLayout
+        android:id="@+id/global_search_action_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/color_000"
+        android:orientation="horizontal">
+
+        <com.hch.viewlib.widget.DeletableEditText
+            android:id="@+id/tab_bar_keyword_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edittext_fang"
+            android:drawableLeft="@drawable/search_selection_state"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/delete"
+            android:hint="输入文本..."
+            android:maxLength="50"
+            android:paddingBottom="7dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="8dp"
+            android:paddingTop="7dp"
+            android:singleLine="true"
+            android:textColor="@color/color_000"
+            android:textCursorDrawable="@null"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tab_bar_cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="取消"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/global_search_action_bar_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/search_history_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/global_search_action_bar_rl_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/color_e6e6e6" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_tip"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="4"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="搜索历史"
+                            android:textColor="@color/color_000" />
+
+                        <RelativeLayout
+                            android:id="@+id/delete_clear_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_toRightOf="@+id/tv_tip"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/delete_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toLeftOf="@+id/clear_tv"
+                                android:src="@drawable/recorder_clean" />
+
+                            <TextView
+                                android:id="@+id/clear_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:text="清除"
+                                android:textSize="14sp"
+                                android:textColor="@color/color_999999" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rl"
+                        android:background="@color/color_e6e6e6" />
+
+                    <com.hch.viewlib.widget.MyListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/search_history_ll_view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/search_history_ll"
+                android:background="@color/color_e6e6e6" />
+
+            <ImageView
+                android:id="@+id/replace_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/search_history_ll_view"
+                android:background="@drawable/tuiguangtu" />
+
+            <View
+                android:id="@+id/replace_image_iv_view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/replace_image_iv"
+                android:background="@color/color_e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/search_hot_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/replace_image_iv_view"
+                android:background="@color/color_ffffff">
+
+                <TextView
+                    android:id="@+id/hot_search_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="热门搜索"
+                    android:textColor="@color/color_000" />
+
+                <ImageView
+                    android:id="@+id/hot_search_tv_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/hot_search_tv"
+                    android:background="@color/color_e6e6e6" />
+
+                <com.hch.viewlib.widget.TagListView
+                    xmlns:f="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/tagview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hot_search_tv_iv"
+                    android:paddingBottom="@dimen/common_margin"
+                    android:paddingLeft="@dimen/common_margin"
+                    android:paddingRight="@dimen/common_margin"
+                    android:paddingTop="16.0dip"
+                    f:horizontalSpacing="@dimen/tag_horizontal_spacing"
+                    f:orientation="horizontal"
+                    f:verticalSpacing="@dimen/tag_vertical_spacing" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

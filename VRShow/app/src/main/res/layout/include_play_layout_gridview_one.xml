@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/eyes_controller_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/eyes_controller_ll"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/eyes_controller_gridview_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_cc000000"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:id="@+id/eyes_controller_vrui_title_rl"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="3dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/eyes_controller_video_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/eyes_controller_video_iv"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/eyes_vrui_videos" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="2dp"
+                                android:text="视频"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="@dimen/text_size_8" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/eyes_controller_game_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/eyes_controller_game_iv"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/eyes_vrui_games" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="2dp"
+                                android:text="游戏"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="@dimen/text_size_8" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eyes_controller_vrui_content_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eyes_controller_vrui_title_rl">
+
+                    <com.hch.viewlib.widget.NoScrollGridView
+                        android:id="@+id/eyes_controller_video_gv"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:visibility="gone">
+                    </com.hch.viewlib.widget.NoScrollGridView>
+                    <!-- <com.hch.library.widget.NoScrollGridView
+                         android:id="@+id/eyes_controller_classify_gv"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:listSelector="@android:color/transparent"
+                         android:numColumns="3"
+                         android:visibility="gone"></com.hch.library.widget.NoScrollGridView>-->
+
+                    <LinearLayout
+                        android:id="@+id/eyes_controller_classify_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_beauty">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_1"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="美女"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_dance">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_2"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="歌舞"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_funny">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_3"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="搞笑"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_fashion">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_4"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="时尚"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_tourism">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_5"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="旅游"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_comi">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_6"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="动漫"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_music">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_7"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="音乐"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_movement">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_8"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="运动"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_science">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_9"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="科幻"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_plot">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_10"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="剧情"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_literary">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_11"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="文艺"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_terrorist">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_12"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:background="@drawable/eyes_vrui_selete" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="恐怖"
+                                        android:textColor="@color/color_000000"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/eyes_controller_classify_13"
+                                    android:layout_width="80dp"
+                                    android:layout_height="45dp"
+                                    android:background="@drawable/eyes_vrui_advertisement" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="45dp">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_00b0c7" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="全部"
+                                        android:textColor="@color/color_ffffff"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="80dp"
+                                    android:layout_height="45dp">
+
+                                    <ImageView
+                                        android:id="@+id/eyes_controller_classify_15"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/color_00b0c7" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="历史记录"
+                                        android:textColor="@color/color_ffffff"
+                                        android:textSize="@dimen/text_size_8" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/eyes_controller_loading_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone">
+                        <ImageView
+                            android:id="@+id/eyes_controller_loading_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@color/color_transparent"
+                            android:src="@drawable/default_ptr_rotate"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/eyes_controller_emity_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/color_00b0c7"
+                        android:visibility="gone">
+                        <TextView
+                            android:id="@+id/eyes_controller_emity_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ssssssss"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/text_size_14"
+                            android:textColor="@color/color_ffffff"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/eyes_controller_vrui_content_rl"
+                    android:layout_below="@+id/eyes_controller_vrui_content_rl"
+                    android:layout_margin="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/eyes_controller_video_bootom_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+                        <ImageView
+                            android:id="@+id/eyes_controller_video_back_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/eyes_vrui_back_bt"/>
+                        <RelativeLayout
+                            android:id="@+id/eyes_controller_video_page_rl"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+                            <ImageView
+                                android:id="@+id/eyes_controller_video_last_iv"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/eyes_vrui_left_flip_page"/>
+                            <TextView
+                                android:id="@+id/eyes_controller_video_page_num_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="1/12"
+                                android:textSize="@dimen/text_size_10"
+                                android:textColor="@color/color_ffffff"/>
+                            <ImageView
+                                android:id="@+id/eyes_controller_video_next_iv"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/eyes_vrui_right_flip_page"/>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/eyes_controller_retract_iv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/eyes_vrui_hide" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eyes_controller_bootom_rl"
+                android:layout_width="105dp"
+                android:layout_height="35dp"
+                android:alpha="0.3"
+                android:layout_gravity="center_horizontal">
+                <Button
+                    android:id="@+id/eyes_controller_bootom_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/canvas_rounded_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/eyes_controller_back_bt"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/eyes_vrui_back_bt" />
+
+                    <Button
+                        android:id="@+id/eyes_controller_volume_small_bt"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/eyes_sound_small" />
+                    <Button
+                        android:id="@+id/eyes_controller_volume_big_bt"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/eyes_sound_big" />
+                    <Button
+                        android:id="@+id/eyes_controller_show_down_bt"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/eyes_vrui_show" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.xunixianshi.vrshow.customview.CustomImageView
+        android:id="@+id/eyes_controller_center_iv"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/banner_dian_focus"
+        android:visibility="visible" />
+
+    <com.hch.viewlib.customview.RoundProgressBar
+        android:id="@+id/eyes_controller_center_rpb"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/player_vr_loading_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/color_transparent"
+        android:src="@drawable/default_ptr_rotate"
+        android:visibility="visible" />
+
+</RelativeLayout>

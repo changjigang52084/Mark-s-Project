@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e6e6e6">
+
+    <com.hch.viewlib.widget.PullToRefreshListView
+        android:id="@+id/my_comments_content_ptrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:listSelector="@color/color_transparent"
+        android:divider="@color/color_e6e6e6"
+        android:dividerHeight="5dp"
+        android:scrollbars="none" />
+    <RelativeLayout
+        android:id="@+id/my_comments_include"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_000">
+
+        <ImageButton
+            android:id="@+id/my_comments_back_ib"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/color_transparent"
+            android:src="@drawable/arrow_left_white" />
+
+        <TextView
+            android:id="@+id/my_comments_input_subtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/input_subtitle"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/my_comments_delete_all_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="删除全部"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_18"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_comments_include">
+
+        <include
+            layout="@layout/public_item_net_fail"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/public_item_net_empty"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

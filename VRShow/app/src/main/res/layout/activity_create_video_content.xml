@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_e3e3e3"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/my_fragment_create_video_content_include"
+        layout="@layout/subtitle_header_tag" />
+
+    <RelativeLayout
+        android:id="@+id/my_fragment_create_video_content_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/my_fragment_create_video_content_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/upload_video" />
+
+        <TextView
+            android:id="@+id/my_fragment_create_video_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_fragment_create_video_content_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="上传视频"
+            android:textColor="@color/color_000"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

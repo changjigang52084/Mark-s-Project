@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_ffffff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/audit_failed_content_rl"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/audit_failed_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="审核失败内容"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/audit_failed_re_upload_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="重新上传"
+            android:visibility="gone"
+            android:textColor="@color/color_00b0c7"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/audit_failed_iv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/audit_failed_content_rl"
+        android:background="@color/color_e6e6e6" />
+
+    <TextView
+        android:textColor="@color/color_999999"
+        android:id="@+id/audit_failed_reason_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/audit_failed_content_rl"
+        android:layout_below="@+id/audit_failed_iv"
+        android:layout_margin="10dp"
+        android:text="         "
+        android:textSize="@dimen/text_size_12" />
+
+</RelativeLayout>

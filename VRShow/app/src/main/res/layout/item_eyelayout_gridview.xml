@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="45dp">
+
+    <ImageView
+        android:id="@+id/item_eyelayout_gridview_video_image_iv"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:scaleType="fitXY"
+        android:layout_margin="2dp"/>
+    <TextView
+        android:id="@+id/item_eyelayout_gridview_video_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text="AAA"
+        android:textSize="@dimen/text_size_8"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="3dp"
+        android:layout_marginBottom="3dp"
+        android:visibility="gone"
+        android:background="@color/color_40000000"/>
+    <ImageView
+        android:id="@+id/item_eyelayout_gridview_video_play_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/eyes_vrui_video_play" />
+</RelativeLayout>

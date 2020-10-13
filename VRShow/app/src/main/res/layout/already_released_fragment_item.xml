@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:listSelector="@color/color_ffffff">
+
+    <ImageView
+        android:id="@+id/already_released_video_item_icon_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_defult_icon"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/already_released_video_item_center_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/already_released_video_item_icon_iv"
+        android:background="@color/color_ffffff">
+
+        <ImageView
+            android:id="@+id/public_video_item_more_operation_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/arrow_down" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/public_video_item_more_operation_iv"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/already_released_video_item_bottom_text_left_ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/already_released_video_item_bottom_text_one_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/middle_text_size"/>
+
+                <TextView
+                    android:id="@+id/already_released_video_item_bottom_text_two_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/middle_text_size"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/already_released_video_item_separation_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/already_released_video_item_center_content_rl"
+        android:background="@color/color_e3e3e3" />
+
+    <LinearLayout
+        android:id="@+id/already_released_video_item_more_operation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/already_released_video_item_separation_line_iv"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/color_ffffff"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/already_released_video_item_edit_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/already_released_video_item_edit_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/already_released_edit" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="编辑" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/already_released_video_item_share_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/already_released_video_item_share_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/classify_detail_share_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="@string/share" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/already_released_video_item_delete_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/already_released_video_item_delete_ib"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@color/color_transparent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@drawable/already_released_delete" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="删除" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

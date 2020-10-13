@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xnxs.mediaplayer.widget.media.VRVideoView
+        android:id="@+id/vr_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:render_type="gl_surface">
+        <!--gl_surface  surface-->
+    </com.xnxs.mediaplayer.widget.media.VRVideoView>
+
+    <RelativeLayout
+        android:id="@+id/video_player_ui_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/view_media_vr_double_gridView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="visible">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/include_gridView_layout_ll1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<include-->
+                    <!--android:id="@+id/include_gridView1"-->
+                    <!--layout="@layout/include_play_layout_gridview_one"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/include_gridView_layout_ll2"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<include-->
+                    <!--android:id="@+id/include_gridView2"-->
+                    <!--layout="@layout/include_play_layout_gridview_one"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/video_play_tools_controller_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/video_play_top_tools_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:fitsSystemWindows="true">
+
+                <include layout="@layout/video_play_top_tools" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_play_bottom_tools_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:fitsSystemWindows="true">
+
+                <include layout="@layout/video_play_bottom_tools" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/video_toolbar_gyro_screen_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/video_toolbar_btn_gyro_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/gyroscope_btn_on" />
+
+                <ImageView
+                    android:id="@+id/video_toolbar_btn_screen_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/screen_btn_off" />
+
+                <!--测试代码  不要删-->
+                <!--<Button-->
+                    <!--android:id="@+id/video_jie_ping_btn"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:text="截屏"/>-->
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/player_convenient_prompt_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/color_66ffffff"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/player_convenient_prompt_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/player_video_liang" />
+
+            <TextView
+                android:id="@+id/player_convenient_prompt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_media_play_open_up_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/view_media_play_open_up_one"
+                layout="@layout/view_media_play_open_up"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/view_media_play_open_up_two"
+                layout="@layout/view_media_play_open_up"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_media_play_loading_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/player_loading_left_iv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/color_transparent"
+                android:src="@drawable/default_ptr_rotate"
+                 />
+            <ImageView
+                android:id="@+id/player_loading_right_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/color_transparent"
+                android:src="@drawable/default_ptr_rotate"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

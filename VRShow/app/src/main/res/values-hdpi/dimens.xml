@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用适配字体 -->
+    <dimen name="big_text_size">16sp</dimen>
+    <dimen name="small_big_text_size">15sp</dimen>
+    <dimen name="middle_text_size">14sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="very_small_text_size">10sp</dimen>
+    <!-- 通用适配长度 -->
+    <dimen name="control_length_10dp">10dp</dimen>
+    <dimen name="control_length_15dp">15dp</dimen>
+    <dimen name="control_length_20dp">20dp</dimen>
+    <dimen name="control_length_25dp">25dp</dimen>
+    <dimen name="control_length_30dp">30dp</dimen>
+    <dimen name="control_length_35dp">35dp</dimen>
+    <dimen name="control_length_40dp">40dp</dimen>
+    <dimen name="control_length_45dp">45dp</dimen>
+    <dimen name="control_length_50dp">50dp</dimen>
+</resources>

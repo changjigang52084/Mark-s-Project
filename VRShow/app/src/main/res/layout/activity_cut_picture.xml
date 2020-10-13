@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.xunixianshi.vrshow.my.information.cutPicture.ClipImageView
+        android:id="@+id/cut_pictrue_civ"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.xunixianshi.vrshow.my.information.cutPicture.ClipView
+        android:id="@+id/cut_pictrue_cv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/cut_pictrue_save_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存" />
+</RelativeLayout>
