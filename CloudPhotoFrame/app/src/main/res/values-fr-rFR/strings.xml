@@ -1,0 +1,130 @@
+<resources>
+
+    <string name="app_name">CloudPhotoFrame</string>
+    <string name="volume">Volume</string>
+    <string name="brightness"> Luminosité </string>
+    <string name="language"> Langue </string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="show_clock"> Afficher l\'horloge </string>
+    <string name="show_caption"> Afficher la légende </string>
+    <string name="show_settings_changed_notification"> Afficher la notification des paramètres modifiés </string>
+    <string name="show_syncing_icon_when_photos_are_received"> Afficher l\'icône de synchronisation lorsque les photos sont reçues </string>
+    <string name="show_notification_for_new_contents_received"> Afficher la notification pour les nouveaux contenus reçus </string>
+    <string name="show_sender_name_when_photos_are_first_received"> Afficher le nom de l\'expéditeur lors de la première réception des photos </string>
+    <string name="playback_mode"> Mode de lecture </string>
+    <string name="shuffle">Aléatoire</string>
+    <string name="motion_sensor"> Capteur de mouvement </string>
+    <string name="when_frame_goes_to_sleep">Quand le cadre va se mettre en veille</string>
+    <string name="when_frame_wakes_up"> Quand le cadre se réveille </string>
+    <string name="bad_network_connectivity_mode"> Mode de connectivité réseau incorrect </string>
+    <string name="check_for_updates"> Vérifier les mises à jour </string>
+    <string name="Set_time_zone"> Définir le fuseau horaire </string>
+    <string name="show_software_content">"         ""Vucatimes Mise à jour de l\’application régulière."\n"Click \' Vérifier les mises à jour \' vérifier les nouvelles mises à jours  logicielles."\n""　　" Cela ne fonctionne qu'avec une connexion Internet active.</string>
+    <string name="system">System :</string>
+    <string name="name">Nom :</string>
+    <string name="location"> Emplacement:</string>
+    <string name="model"> Modèle:</string>
+    <string name="text1"> Cet appareil est conforme à la partie 15 des règles de la FCC. Le fonctionnement est soumis aux deux conditions suivantes:</string>
+    <string name="text2">(1) cet appareil ne doit pas provoquer d\'interférences nuisibles, et. </string>
+    <string name="text3">(2) cet appareil doit accepter toute interférence reçue, y compris les interférences qui peuvent "\n" provoquer un fonctionnement indésirable.</string>
+    <string name="user_name">Nom de l’utilisateur :</string>
+    <string name="serial_number">Numéro de série :</string>
+    <string name="frame_id">Identifiant du cadre :</string>
+    <string name="firmware">Firmware :</string>
+    <string name="application">Application :</string>
+    <string name="revision">Revision :</string>
+    <string name="fcc_id">FCC ID :</string>
+    <string name="ic">IC :</string>
+    <string name="ip_address"> Adresse IP :</string>
+    <string name="mac_address_wifi"> Adresse MAC  (Wifi):</string>
+    <string name="download_queue_count"> Nombre de files d\'attente de téléchargement:</string>
+    <string name="connect">connecter</string>
+    <string name="disconnect">déconnecter</string>
+    <string name="password">Mot de passe </string>
+    <string name="Press">Appuyer </string>
+    <string name="connectzil"> sur votre télécommande pour vous connecter </string>
+    <string name="cancel">Annuler</string>
+    <string name="settings">Paramètres</string>
+    <string name="show_hide">Afficher "    "/"    " Cacher</string>
+    <string name="information">Information</string>
+    <string name="advanced">Avancé</string>
+    <string name="software_update">Mise à jour logicielle</string>
+    <string name="time_zone"> Fuseau horaire </string>
+    <string name="display_volume">Affichage "    "/"    " Volume</string>
+    <string name="network">Réseau</string>
+    <string name="transition_type"> Type de transition </string>
+    <string name="transition_time"> Temps de transition </string>
+    <string name="sleep_schedule"> Horaire de sommeil </string>
+
+
+    <string name="english">English</string>
+    <string name="Japan" translatable="false">日本語</string>
+    <string name="Deutsch" translatable="false">Deutsch</string>
+    <string name="Enfran" translatable="false">En français</string>
+    <string name="espaol" translatable="false">español</string>
+
+
+    <string name="rgb_color_adjustment"> Ajustement des couleurs </string>
+    <string name="restore_default_display_settings"> Restaurer les paramètres d\'affichage par défaut </string>
+    <string name="set_time_zone"> Définir le fuseau horaire </string>
+    <string name="run_diagnostic"> Exécuter le diagnostic </string>
+    <string name="hotspot_test"> Test de point d\'accès </string>
+    <string name="resync_frame"> Cadre Resynchronisation du Cadre </string>
+    <string name="drug_administration"> Administration des médicaments </string>
+    <string name="morning"> Matin </string>
+    <string name="remind_eat_drug_time">Rappel de la prise des médicaments</string>
+    <string name="afternoon"> Après midi </string>
+    <string name="evening"> Soir </string>
+    <string name="noon"> Le midi </string>
+    <string name="choice_morning_time"> Choix de l\'heure du matin </string>
+    <string name="choice_noon_time"> Choix de l\'heure du midi </string>
+    <string name="choice_evening_time"> Choix de l\'heure du soir </string>
+    <string name="repeat"> Répéter </string>
+    <string name="Volume" translatable="false">Volume</string>
+    <string name="Close" translatable="false">Fermer</string>
+
+    <!--guide-->
+    <string name="Welcome"> Bienvenue </string>
+    <string name="LetsGetStarted"> Commençons </string>
+    <!--wifi-->
+    <string name="WifiSetup"> Configuration du WiFi </string>
+    <string name="PleaseSelect">Veuillez sélectionner votre réseau WiFi </string>
+    <!--pair your Frame-->
+    <string name="Pair_Your_Frame">Associez votre cadre </string>
+    <string name="Download">Téléchargez l’application vacutimes avec ce QR code. Ou visitez https://www.myvucatimes.com/setup pour l’installation</string>
+    <string name="pair"> associez votre cadre à ce numéro de série </string>
+    <string name="please_max"> Veuillez-vous assurer que votre appareil et votre cadre sont sur le même wifi </string>
+
+    <string name="mon">Lundi</string>
+    <string name="tue">Mardi</string>
+    <string name="wed">Mercredi</string>
+    <string name="thu">Jeudi</string>
+    <string name="fri">Vendredi</string>
+    <string name="sat">Samedi</string>
+    <string name="sun">Dimanche</string>
+    <string name="cycle_sure">Déterminer</string>
+    <string name="vibration"> choc </string>
+    <string name="ring">Sonnerie</string>
+
+    <string name="comitout" translatable="false">OK</string>
+    <string name="comitput" translatable="false">La suppression des</string>
+
+    <string name="reboot" translatable="false">En mode veilleab.</string>
+    <string name="reboot_go" translatable="false">En mode veille...</string>
+
+
+
+    <string name="PlayPhoto" translatable="false">diffusion</string>
+    <string name="PlayPhotoList" translatable="false">Liste de diffusion</string>
+    <string name="Settings" translatable="false">La mise en place</string>
+
+
+    <string name="jianchaWangluo" translatable="false">Inspection des réseaux</string>
+    <string name="jianchafuwuqi" translatable="false">Contrôle de la connexion du serveur</string>
+    <string name="jianchashoujilianjie" translatable="false">Contrôle de l’état du téléphone mobile</string>
+
+    <string name="playlist" translatable="false">Liste de diffusion</string>
+
+    <string name="freeof" translatable="false">gratuit</string>
+</resources>

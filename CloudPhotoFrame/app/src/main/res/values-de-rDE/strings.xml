@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">Cloud-Fotorahmen</string>
+    <string name="volume">Lautstärke</string>
+    <string name="brightness">Helligkeit</string>
+    <string name="language">Sprache</string>
+    <string name="on">Ein</string>
+    <string name="off">Auss</string>
+    <string name="show_clock">Uhr zeigen</string>
+    <string name="show_caption">Untertitel anzeigen</string>
+    <string name="show_settings_changed_notification">Benachrichtigung über geänderte Einstellungen anzeigen</string>
+    <string name="show_syncing_icon_when_photos_are_received">Synchronisierungssymbol anzeigen, wenn Fotos empfangen werden</string>
+    <string name="show_notification_for_new_contents_received">Benachrichtigung bei neuen Inhalten anzeigen</string>
+    <string name="show_sender_name_when_photos_are_first_received">Name des Absenders anzeigen, wenn Fotos zum ersten Mal empfangen werden</string>
+    <string name="playback_mode">Wiedergabemodus</string>
+    <string name="shuffle">Mischen</string>
+    <string name="motion_sensor">Bewegungssensor</string>
+    <string name="when_frame_goes_to_sleep">Wenn der Rahmen in Standby geht</string>
+    <string name="when_frame_wakes_up">Wenn der Rahmen aktiviert wird</string>
+    <string name="bad_network_connectivity_mode"> Schlechte Netzwerk verbindung </string>
+    <string name="check_for_updates">Auf Updates prüfen</string>
+    <string name="Set_time_zone">Zeitzone einstellen</string>
+    <string name="show_software_content">"\u3000\u3000\u3000" Vucatimes Release-Software wird regelmäßig aktualisiert. Klicken Sie auf \'Nach Updates suchen\', um nach neuen Softwareupdates zu suchen. Dies funktioniert nur mit einer aktiven Internetverbindung.</string>
+    <string name="system">System:</string>
+    <string name="name">Name:</string>
+    <string name="location">Ort:</string>
+    <string name="model">Modell:</string>
+    <string name="text1"> Dieses Gerät entspricht Teil 15 der FCC-Bestimmungen. Der Betrieb unterliegt den folgenden beiden Bedingungen:</string>
+    <string name="text2">(1) Dieses Gerät darf keine schädlichen Interferenzen verursachen .</string>
+    <string name="text3">(2) Dieses Gerät muss alle empfangenen Interferenzen akzeptieren, einschließlich Interferenzen, die zu unerwünschten Vorgängen führen können.</string>
+    <string name="user_name">Benutzername:</string>
+    <string name="serial_number">Seriennummer:</string>
+    <string name="frame_id">Rahmen ID:</string>
+    <string name="firmware">Firmware:</string>
+    <string name="application">Anwendung:</string>
+    <string name="revision">Überarbeitung:</string>
+    <string name="fcc_id">FCC ID:</string>
+    <string name="ic">IC:</string>
+    <string name="ip_address">IP Adresse:</string>
+    <string name="mac_address_wifi">MAC Adresse(Wifi):</string>
+    <string name="download_queue_count">Anzahl der Download-Warteschlangen:</string>
+    <string name="connect">verbinden</string>
+    <string name="disconnect">trennen</string>
+    <string name="password">Passwort</string>
+    <string name="Press">Drücken </string>
+    <string name="connectzil"> auf Ihrer Fernbedienung zu verbinden </string>
+    <string name="cancel">beenden</string>
+    <string name="settings">Einstellungen</string>
+    <string name="show_hide">Anzeige "    " Ausblenden</string>
+    <string name="information">Information</string>
+    <string name="advanced">Fortgeschritten</string>
+    <string name="software_update">Software "    " Update</string>
+    <string name="time_zone">Zeitzone</string>
+    <string name="display_volume">Anzeige "    "/"    " Lautstärke</string>
+    <string name="network">Netzwerk</string>
+    <string name="transition_type">Übergangstyp</string>
+    <string name="transition_time">Übergangszeit</string>
+    <string name="sleep_schedule">Standby Plan</string>
+
+
+    <string name="english">English</string>
+    <string name="Japan" translatable="false">日本語</string>
+    <string name="Deutsch" translatable="false">Deutsch</string>
+    <string name="Enfran" translatable="false">En français</string>
+    <string name="espaol" translatable="false">español</string>
+
+
+    <string name="rgb_color_adjustment">RGB Farbanpassung</string>
+    <string name="restore_default_display_settings">Standardanzeigeeinstellungen wiederherstellen</string>
+    <string name="set_time_zone">Zeitzone einstellen</string>
+    <string name="run_diagnostic">Führen Sie die Diagnose aus</string>
+    <string name="hotspot_test">Hotspot Test</string>
+    <string name="resync_frame">Rahmen neu synchronisieren</string>
+    <string name="drug_administration">Medikamenten Verwaltung</string>
+    <string name="morning">Morgen</string>
+    <string name="remind_eat_drug_time"> Erinnern Sie daran, zu essen</string>
+    <string name="afternoon">Nachmittag</string>
+    <string name="evening">Abend</string>
+    <string name="noon">Mittag</string>
+    <string name="choice_morning_time">Wahl der Morgenzeit</string>
+    <string name="choice_noon_time">Wahl mittags</string>
+    <string name="choice_evening_time">Wahl Abendzeit</string>
+    <string name="repeat">Wiederholen</string>
+    <string name="Volume" translatable="false">Lautstärke</string>
+    <string name="Close" translatable="false">schließen</string>
+
+    <!--guide-->
+    <string name="Welcome">Willkommen</string>
+    <string name="LetsGetStarted">Lassen Sie uns anfangen</string>
+    <!--wifi-->
+    <string name="WifiSetup">WiFi Einrichtung</string>
+    <string name="PleaseSelect">Bitte wählen Sie Ihr WiFi-Netzwerk</string>
+    <!--pair your Frame-->
+    <string name="Pair_Your_Frame">Koppeln Sie Ihren Rahmen</string>
+    <string name="Download"> Laden Sie die mobile App thie vacutimes mit diesem QR-Code herunter. Oder besuchen Sie https://www.myvucatimes.com/app, um die Einstellungen vorzunehmen </string>
+    <string name="pair">Koppeln Sie Ihren Rahmen mit dieser Seriennummer</string>
+    <string name="please_max">Bitte stellen Sie sicher, dass sich Ihr Gerät und Ihr Rahmen im selben WLAN befinden </string>
+
+    <string name="mon">Montag</string>
+    <string name="tue">Dienstag</string>
+    <string name="wed">Mittwoch</string>
+    <string name="thu">Donnerstag</string>
+    <string name="fri">Freitag</string>
+    <string name="sat">Samstag</string>
+    <string name="sun">Sonntag</string>
+    <string name="cycle_sure">Bestimmen</string>
+    <string name="vibration">Vibration</string>
+    <string name="ring">Klingelton</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+
+
+    <string name="comitout" translatable="false">OK</string>
+    <string name="comitput" translatable="false">Abbrechen</string>
+
+    <string name="reboot" translatable="false">Schalten Sie die Stromversorgung ab.</string>
+    <string name="reboot_go" translatable="false">Zum Abschluss</string>
+
+
+
+    <string name="PlayPhoto" translatable="false">regenerieren</string>
+    <string name="PlayPhotoList" translatable="false">Wiedergabeliste</string>
+    <string name="Settings" translatable="false">Set up</string>
+
+
+    <string name="jianchaWangluo" translatable="false">Netzwerk prüfen</string>
+    <string name="jianchafuwuqi" translatable="false">Serververbindung prüfen</string>
+    <string name="jianchashoujilianjie" translatable="false">Telefonstatus prüfen</string>
+
+    <string name="playlist" translatable="false">Playlist</string>
+
+    <string name="freeof" translatable="false">free of</string>
+</resources>

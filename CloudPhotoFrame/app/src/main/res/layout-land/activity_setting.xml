@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/radio_group"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/radio_group"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--选择色  android:background="@drawable/radiobutton_background"
+        字体选择色      android:textColor="@color/radiobutton_textcolor"
+        -->
+        <TextView
+            android:id="@+id/settings_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/settings"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/show_hide_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/show_hide"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/network_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/network"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/display_volume_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/display_volume"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/time_zone_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/time_zone"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/software_update_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/software_update"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/advanced_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/advanced"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/information_rb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableRight="@drawable/acm"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/information"
+            android:textSize="23sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

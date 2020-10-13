@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@color/intercom_full_transparent_full_black"
+                android:layout_height="match_parent">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_marginTop="80dp"
+                  android:textSize="20dp"
+                  android:text="Brightness"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textSize="20dp"
+                  android:id="@+id/MolumeText"
+                  android:layout_margin="10dp"
+                  android:text="0"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:gravity="center"
+                      android:layout_height="wrap_content">
+
+            <ImageView android:layout_width="45dp"
+                       android:layout_height="37dp"
+                       android:layout_margin="20dp"
+                       android:src="@drawable/brightness_battle"/>
+
+            <SeekBar
+                    android:id="@+id/BrightnessSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:max="255"
+                    android:splitTrack="false"
+                    android:maxHeight="17.92dp"
+                    android:minHeight="17.92dp"
+                    android:thumbOffset="0dp"/>
+
+            <ImageView android:layout_width="37.5dp"
+                       android:layout_height="37.5dp"
+                       android:layout_margin="20dp"
+                       android:src="@drawable/brightness_bag"/>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/ColseVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Close"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

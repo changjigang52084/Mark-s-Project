@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <!--播放模式-->
+    <TextView
+        android:id="@+id/playback_mode_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/playback_mode"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+    <!--随机播放-->
+    <TextView
+        android:id="@+id/shuffle_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/shuffle"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+    <!--播放动画类型-->
+    <TextView
+        android:id="@+id/transition_type_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/transition_type"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+    <!--播放时间-->
+    <TextView
+        android:id="@+id/transition_time_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/transition_time"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+
+    <!--运动传感器-->
+    <TextView
+        android:id="@+id/motion_sensor_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/motion_sensor"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+    <!--当相框进入休眠-->
+    <TextView
+        android:id="@+id/when_frame_goes_to_sleep_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/when_frame_goes_to_sleep"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/background_music"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="Background Music"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp" />
+
+</LinearLayout>

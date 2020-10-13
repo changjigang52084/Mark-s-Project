@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Beijinshezhi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/beijing"/>
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/Welcome"
+        android:textSize="60dp" />
+
+    <TextView
+        android:id="@+id/lastwelcome"
+        android:layout_below="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/LetsGetStarted"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/LocalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:layout_margin="30dp"
+        android:background="@color/MainBlue"/>
+
+
+</RelativeLayout>

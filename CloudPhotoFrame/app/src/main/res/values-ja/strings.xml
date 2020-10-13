@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">CloudPhotoFrame</string>
+    <string name="volume">音量</string>
+    <string name="brightness">明るさ</string>
+    <string name="language">言語</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="show_clock">時計を表示</string>
+    <string name="show_caption">キャプション表示</string>
+    <string name="show_settings_changed_notification">設定の変更を通知</string>
+    <string name="show_syncing_icon_when_photos_are_received">写真を受信時にアイコンを表示</string>
+    <string name="show_notification_for_new_contents_received">コンテンツ受信時に通知</string>
+    <string name="show_sender_name_when_photos_are_first_received">最初の写真を受信時に送信者名を表示</string>
+    <string name="playback_mode">再生モード</string>
+    <string name="shuffle">シャッフル</string>
+    <string name="motion_sensor">モーションセンサー</string>
+    <string name="when_frame_goes_to_sleep">フレームがスリープ時</string>
+    <string name="when_frame_wakes_up">ふれーむが起動時</string>
+    <string name="bad_network_connectivity_mode">ネットワーク接続が不安定です</string>
+    <string name="check_for_updates">アップデートを確認</string>
+    <string name="Set_time_zone">タイムゾーンを設定</string>
+    <string name="show_software_content">"\u3000\u3000\u3000"Vucatimesは定期的にアップデートを配信しています。"\n"Click \'アップデートを確認\' 再ｓんんおアップデートを確認してください。"\n""　　"インターネットへの接続が必須です。</string>
+    <string name="system">システム:</string>
+    <string name="name">名称:</string>
+    <string name="location">場所:</string>
+    <string name="model">モデル:</string>
+    <string name="text1">この端末はFCC規定15に準拠しています。動作には次の二つの条件があります:</string>
+    <string name="text2">(1この端末が有害な電波干渉を引き起こさないこと、。</string>
+    <string name="text3">(2)望ましくない動作を引き起こす可能性のある干渉も受信する必要があります。</string>
+    <string name="user_name">ユーザー名:</string>
+    <string name="serial_number">シリアル番号:</string>
+    <string name="frame_id">フレームID:</string>
+    <string name="firmware">ファームウェア:</string>
+    <string name="application">アプリケーション:</string>
+    <string name="revision">リビジョン:</string>
+    <string name="fcc_id">FCC ID:</string>
+    <string name="ic">IC:</string>
+    <string name="ip_address">IPアドレス:</string>
+    <string name="mac_address_wifi">MACアドレス(Wifi):</string>
+    <string name="download_queue_count">ダウンロード数カウント:</string>
+    <string name="connect">接続</string>
+    <string name="disconnect">接続解除</string>
+    <string name="password">パスワード</string>
+    <string name="Press">押す</string>
+    <string name="connectzil">リモコンで操作して接続</string>
+    <string name="cancel">キャンセル</string>
+    <string name="settings">設定</string>
+    <string name="show_hide">表示 "    "/"    " 隠す</string>
+    <string name="information">情報</string>
+    <string name="advanced">高度な設定</string>
+    <string name="software_update">ソフトウェア更新</string>
+    <string name="time_zone">タイムゾーン</string>
+    <string name="display_volume">表示 "    "/"    " 音量</string>
+    <string name="network">ネットワーク</string>
+    <string name="transition_type">トランジション</string>
+    <string name="transition_time">トランジション時間</string>
+    <string name="sleep_schedule">スリープ設定</string>
+
+
+    <string name="english">English</string>
+    <string name="Japan" translatable="false">日本語</string>
+    <string name="Deutsch" translatable="false">Deutsch</string>
+    <string name="Enfran" translatable="false">En français</string>
+    <string name="espaol" translatable="false">español</string>
+
+    <string name="rgb_color_adjustment">RGBカラー</string>
+    <string name="restore_default_display_settings">デフォルト画面設定を復元</string>
+    <string name="set_time_zone">タイムゾーンを設定</string>
+    <string name="run_diagnostic">診断を実行</string>
+    <string name="hotspot_test">ホットスポットテスト</string>
+    <string name="resync_frame">フレームを再接続</string>
+    <string name="drug_administration">お薬</string>
+    <string name="morning">朝</string>
+    <string name="remind_eat_drug_time">お薬の時間を通知</string>
+    <string name="afternoon">午後</string>
+    <string name="evening">夕方</string>
+    <string name="noon">正午</string>
+    <string name="choice_morning_time">朝の時間設定</string>
+    <string name="choice_noon_time">正午の時間定</string>
+    <string name="choice_evening_time">夕方の時間設定</string>
+    <string name="repeat">繰り返し</string>
+    <string name="Volume" translatable="false">音量</string>
+    <string name="Close" translatable="false">閉じる</string>
+
+    <!--guide-->
+    <string name="Welcome">ようこそ</string>
+    <string name="LetsGetStarted">さあはじめましょう</string>
+    <!--wifi-->
+    <string name="WifiSetup">WiFi設定</string>
+    <string name="PleaseSelect">WiFiネットワークを選択してください</string>
+    <!--pair your Frame-->
+    <string name="Pair_Your_Frame">フレームを登録</string>
+    <string name="Download">QRコードを読み込むかhttps://www.myvucatimes.com/appから、Vucatimesアプリをダウンロード。</string>
+    <string name="pair">以下のシリアル番号を使用してフレームを登録してください。</string>
+    <string name="please_max">フレームとお使いの端末が同じネットワークに接続されていることを確認してください。</string>
+
+    <string name="mon">月曜日</string>
+    <string name="tue">火曜日</string>
+    <string name="wed">水曜日</string>
+    <string name="thu">木曜日</string>
+    <string name="fri">金曜日</string>
+    <string name="sat">土曜日</string>
+    <string name="sun">日曜日</string>
+    <string name="cycle_sure">決定</string>
+    <string name="vibration">バイブレーション</string>
+    <string name="ring">アラーム音</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="comitout" translatable="false">确定</string>
+    <string name="comitput" translatable="false">取消</string>
+
+    <string name="reboot" translatable="false">電源を切る</string>
+    <string name="reboot_go" translatable="false">シャットダウン中</string>
+
+
+
+    <string name="PlayPhoto" translatable="false">再生</string>
+    <string name="PlayPhotoList" translatable="false">プレイリスト</string>
+    <string name="Settings" translatable="false">設定</string>
+
+
+    <string name="jianchaWangluo" translatable="false">チェックネットワーク</string>
+    <string name="jianchafuwuqi" translatable="false">サーバ接続のチェック</string>
+    <string name="jianchashoujilianjie" translatable="false">チェック電話ステータス</string>
+
+
+
+    <string name="playlist" translatable="false">プレイリスト</string>
+
+    <string name="freeof" translatable="false">無料の</string>
+</resources>

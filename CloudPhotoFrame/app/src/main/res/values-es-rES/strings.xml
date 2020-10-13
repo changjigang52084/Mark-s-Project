@@ -1,0 +1,132 @@
+<resources>
+
+    <string name="app_name">CloudPhotoFrame</string>
+    <string name="volume">Volumen</string>
+    <string name="brightness">Brillo</string>
+    <string name="language">Idioma</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="show_clock">Mostrar Reloj</string>
+    <string name="show_caption">Mostrar Captura</string>
+    <string name="show_settings_changed_notification">Mostrar notificación de cambios de Configuración</string>
+    <string name="show_syncing_icon_when_photos_are_received">Mostrar icono cuando se reciban fotos</string>
+    <string name="show_notification_for_new_contents_received">Mostrar notificación cuando se reciban nuevos contenidos</string>
+    <string name="show_sender_name_when_photos_are_first_received">Mostrar remitente cuando se reciban las fotos</string>
+    <string name="playback_mode">Modo Reproducción</string>
+    <string name="shuffle">Aleatorio</string>
+    <string name="motion_sensor">Sensor de movimiento</string>
+    <string name="when_frame_goes_to_sleep">Cuando el Marco pase a Reposo</string>
+    <string name="when_frame_wakes_up">Cuando el Marco salga de Reposo</string>
+    <string name="bad_network_connectivity_mode">Mala conexion de red</string>
+    <string name="check_for_updates">Revise actualizaciones</string>
+    <string name="Set_time_zone">Ajustar Zona Horaria</string>
+    <string name="show_software_content">"\u3000\u3000\u3000"Vucatimes leberara Actualizaciones de SW regularmente."\n"Click \’Revise Actualizaciones\' para chequear nuevas versiones de SW."\n""　　"Sólo funcionará con conexiones activas de Internet.</string>
+    <string name="system">Sistema:</string>
+    <string name="name">Nombre:</string>
+    <string name="location">Localización:</string>
+    <string name="model">Modelo:</string>
+    <string name="text1">This device complies with Part 15 of the FCC Rules. Operation is subject to the following two conditions:</string>
+    <string name="text2">(1)Este dispositivo no causará interferencias, y.</string>
+    <string name="text3">(2)Este dispositivo aceptará cualquier interferencia recibida, pudiendo causaroperaciones indeseadas..</string>
+    <string name="user_name">Nombre de Usuario:</string>
+    <string name="serial_number">Número de Serie:</string>
+    <string name="frame_id">Marco ID:</string>
+    <string name="firmware">Firmware:</string>
+    <string name="application">Aplicación:</string>
+    <string name="revision">Revision:</string>
+    <string name="fcc_id">FCC ID:</string>
+    <string name="ic">IC:</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="mac_address_wifi">MAC Address(Wifi):</string>
+    <string name="download_queue_count">Descargar queue count:</string>
+    <string name="connect">conectar</string>
+    <string name="disconnect">desconectar</string>
+    <string name="password">contraseña</string>
+    <string name="Press">Presionar </string>
+    <string name="connectzil"> en tu remote para conectar</string>
+    <string name="cancel">cancelar</string>
+    <string name="settings">Configuración</string>
+    <string name="show_hide">Mostrar "    "/"    " Ocultar</string>
+    <string name="information">Información</string>
+    <string name="advanced">Avanzado</string>
+    <string name="software_update">Actualización "    " Software </string>
+    <string name="time_zone">Zona Horaria</string>
+    <string name="display_volume">Pantalla "    "/"    " Volumen</string>
+    <string name="network">Red</string>
+    <string name="transition_type">Tipo de Transición</string>
+    <string name="transition_time">Tiempo de Transición</string>
+    <string name="sleep_schedule">Esquema de Reposo</string>
+
+
+    <string name="english">English</string>
+    <string name="Japan" translatable="false">日本語</string>
+    <string name="Deutsch" translatable="false">Deutsch</string>
+    <string name="Enfran" translatable="false">En français</string>
+    <string name="espaol" translatable="false">español</string>
+
+
+    <string name="rgb_color_adjustment">RGB Ajuste de Color</string>
+    <string name="restore_default_display_settings">Restaurar configuración de Pantalla</string>
+    <string name="set_time_zone">Establecer Zona Horaria</string>
+    <string name="run_diagnostic">Ejecutar Diagnóstico</string>
+    <string name="hotspot_test">Testear Wifi</string>
+    <string name="resync_frame">Resincronizar Marco</string>
+    <string name="drug_administration">Administración</string>
+    <string name="morning">Mañana</string>
+    <string name="remind_eat_drug_time">recorder hora comida</string>
+    <string name="afternoon">Tarde</string>
+    <string name="evening">Noche</string>
+    <string name="noon">Mediodía</string>
+    <string name="choice_morning_time">Elegir Tiempo Mañana</string>
+    <string name="choice_noon_time">Elegir Tiempo Mediodía</string>
+    <string name="choice_evening_time">Elegir Tiempo Tarde</string>
+    <string name="repeat">Repetir</string>
+    <string name="Volume" translatable="false">Volumen</string>
+    <string name="Close" translatable="false">Cerrar</string>
+
+    <!--guide-->
+    <string name="Welcome">Bienvenido</string>
+    <string name="LetsGetStarted">Empecemos</string>
+    <!--wifi-->
+    <string name="WifiSetup">Configurar WiFi </string>
+    <string name="PleaseSelect">Por favor selecciona tu WIFI</string>
+    <!--pair your Frame-->
+    <string name="Pair_Your_Frame">Empareja tu Marco</string>
+    <string name="Download">Descargar Aplicación para móvil Vacutimes con este código QR c. O visita https://www.myvucatimes.com/setup para configurarlo</string>
+    <string name="pair">Empareja tu marco con este número de serie</string>
+    <string name="please_max">Por favor, asegúrate de que el Marco y el móvil estén en la misma red wifi</string>
+
+    <string name="mon">Lunes</string>
+    <string name="tue">Martes</string>
+    <string name="wed">Miercoles</string>
+    <string name="thu">Jueves</string>
+    <string name="fri">Viernes</string>
+    <string name="sat">Sábado</string>
+    <string name="sun">Domingo</string>
+    <string name="cycle_sure">Determinar</string>
+    <string name="vibration">Vibración</string>
+    <string name="ring">Tono de Llamada</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola Fragmento en Blanco</string>
+
+
+    <string name="comitout" translatable="false">OK</string>
+    <string name="comitput" translatable="false">cancelación</string>
+
+
+    <string name="reboot" translatable="false">apagado</string>
+    <string name="reboot_go" translatable="false">apagado...</string>
+
+    <string name="PlayPhoto" translatable="false">reproducción</string>
+    <string name="PlayPhotoList" translatable="false">Lista de reproducción</string>
+    <string name="Settings" translatable="false">La configuración</string>
+
+    <string name="jianchaWangluo" translatable="false">Comprobar la red</string>
+    <string name="jianchafuwuqi" translatable="false">Comprobar la conexión del servidor</string>
+    <string name="jianchashoujilianjie" translatable="false">Comprobar el estado del teléfono</string>
+
+    <string name="playlist" translatable="false">reproducción</string>
+
+    <string name="freeof" translatable="false">gratis</string>
+</resources>

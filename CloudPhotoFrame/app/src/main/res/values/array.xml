@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="timezone">
+        <item>(GMT+1:00) Africa/Brazzaville</item>
+        <item>(GMT+2:00) Africa/Cairo</item>
+        <item>(GMT 0:00) Africa/Casablanca</item>
+        <item>(GMT+2:00) Africa/Harare</item>
+        <item>(GMT+3:00) Africa/Nairobi</item>
+        <item>(GMT+1:00) Africa/Windhoek</item>
+        <item>(GMT-9:00) America/Anchorage</item>
+        <item>(GMT-3:00) America/Argentina/Buenos Aires</item>
+        <item>(GMT-4:00) America/Barbados</item>
+        <item>(GMT-5:00) America/Bogota</item>
+        <item>(GMT-4:30) America/Caracas</item>
+        <item>(GMT-6:00) America/Chicago</item>
+        <item>(GMT-7:00) America/Chihuahua</item>
+        <item>(GMT-6:00) America/Costa Rica</item>
+        <item>(GMT-7:00) America/Denver</item>
+        <item>(GMT-3:00) America/Godthab</item>
+        <item>(GMT-4:00) America/Halifax</item>
+        <item>(GMT-8:00) America/Los Angeles</item>
+        <item>(GMT-4:00) America/Manaus</item>
+        <item>(GMT-6:00) America/Mexico City</item>
+        <item>(GMT-3:00) America/Montevideo</item>
+        <item>(GMT-5:00) America/New York</item>
+        <item>(GMT-7:00) America/Phoenix</item>
+        <item>(GMT-6:00) America/Regina</item>
+        <item>(GMT-4:00) America/Santiago</item>
+        <item>(GMT-3:00) America/Sao Paulo</item>
+        <item>(GMT-3:30) America/St Johns</item>
+        <item>(GMT-8:00) America/Tijuana</item>
+        <item>(GMT+6:00) Asia/Almaty</item>
+        <item>(GMT+2:00) Asia/Amman</item>
+        <item>(GMT+3:00) Asia/Baghdad</item>
+        <item>(GMT+4:00) Asia/Baku</item>
+        <item>(GMT+7:00) Asia/Bangkok</item>
+        <item>(GMT+2:00) Asia/Beirut</item>
+        <item>(GMT+5:30) Asia/Calcutta</item>
+        <item>(GMT+5:30) Asia/Colombo</item>
+        <item>(GMT+4:00) Asia/Dubai</item>
+        <item>(GMT+8:00) Asia/Hong Kong</item>
+        <item>(GMT+9:00) Asia/Irkutsk</item>
+        <item>(GMT+2:00) Asia/Jerusalem</item>
+        <item>(GMT+4:30) Asia/Kabul</item>
+        <item>(GMT+5:00) Asia/Karachi</item>
+        <item>(GMT+5:45) Asia/Kathmandu</item>
+        <item>(GMT+8:00) Asia/Krasnoyarsk</item>
+        <item>(GMT+8:00) Asia/Kuala Lumpur</item>
+        <item>(GMT+3:00) Asia/Kuwait</item>
+        <item>(GMT+12:00) Asia/Magadan</item>
+        <item>(GMT+5:00) Asia/Oral</item>
+        <item>(GMT+6:30) Asia/Rangoon</item>
+        <item>(GMT+9:00) Asia/Seoul</item>
+        <item>(GMT+8:00) Asia/Shanghai</item>
+        <item>(GMT+8:00) Asia/Taipei</item>
+        <item>(GMT+4:00) Asia/Tbilisi</item>
+        <item>(GMT+3:30) Asia/Tehran</item>
+        <item>(GMT+9:00) Asia/Tokyo</item>
+        <item>(GMT+11:00) Asia/Vladivostok</item>
+        <item>(GMT+10:00) Asia/Yakutsk</item>
+        <item>(GMT+6:00) Asia/Yekaterinburg</item>
+        <item>(GMT+4:00) Asia/Yerevan</item>
+        <item>(GMT-1:00) Atlantic/Azores</item>
+        <item>(GMT-1:00) Atlantic/Cape Verde</item>
+        <item>(GMT 0:00) Atlantic/Reykjavik</item>
+        <item>(GMT-2:00) Atlantic/South Georgia</item>
+        <item>(GMT+9:30) Australia/Adelaide</item>
+        <item>(GMT+10:00) Australia/Brisbane</item>
+        <item>(GMT+9:30) Australia/Darwin</item>
+        <item>(GMT+10:00) Australia/Hobart</item>
+        <item>(GMT+8:00) Australia/Perth</item>
+        <item>(GMT+10:00) Australia/Sydney</item>
+        <item>(GMT+1:00) Europe/Amsterdam</item>
+        <item>(GMT+2:00) Europe/Athens</item>
+        <item>(GMT+1:00) Europe/Belgrade</item>
+        <item>(GMT+1:00) Europe/Berlin</item>
+        <item>(GMT+1:00) Europe/Brussels</item>
+        <item>(GMT 0:00) Europe/Dublin</item>
+        <item>(GMT+2:00) Europe/Helsinki</item>
+        <item>(GMT 0:00) Europe/London</item>
+        <item>(GMT+3:00) Europe/Minsk</item>
+        <item>(GMT+4:00) Europe/Moscow</item>
+        <item>(GMT+1:00) Europe/Rome</item>
+    </array>
+
+    <array name="timezones">
+        <item>Africa/Brazzaville</item>
+        <item>Africa/Cairo</item>
+        <item>Africa/Casablanca</item>
+        <item>Africa/Harare</item>
+        <item>Africa/Nairobi</item>
+        <item>Africa/Windhoek</item>
+        <item>America/Anchorage</item>
+        <item>America/Argentina/Buenos_Aires</item>
+        <item>America/Barbados</item>
+        <item>America/Bogota</item>
+        <item>America/Caracas</item>
+        <item>America/Chicago</item>
+        <item>America/Chihuahua</item>
+        <item>America/Costa_Rica</item>
+        <item>America/Denver</item>
+        <item>America/Godthab</item>
+        <item>America/Halifax</item>
+        <item>America/Los_Angeles</item>
+        <item>America/Manaus</item>
+        <item>America/Mexico_City</item>
+        <item>America/Montevideo</item>
+        <item>America/New_York</item>
+        <item>America/Phoenix</item>
+        <item>America/Regina</item>
+        <item>America/Santiago</item>
+        <item>America/Sao_Paulo</item>
+        <item>America/St_Johns</item>
+        <item>America/Tijuana</item>
+        <item>Asia/Almaty</item>
+        <item>Asia/Amman</item>
+        <item>Asia/Baghdad</item>
+        <item>Asia/Baku</item>
+        <item>Asia/Bangkok</item>
+        <item>Asia/Beirut</item>
+        <item>Asia/Calcutta</item>
+        <item>Asia/Colombo</item>
+        <item>Asia/Dubai</item>
+        <item>Asia/Hong_Kong</item>
+        <item>Asia/Irkutsk</item>
+        <item>Asia/Jerusalem</item>
+        <item>Asia/Kabul</item>
+        <item>Asia/Karachi</item>
+        <item>Asia/Kathmandu</item>
+        <item>Asia/Krasnoyarsk</item>
+        <item>Asia/Kuala_Lumpur</item>
+        <item>Asia/Kuwait</item>
+        <item>Asia/Magadan</item>
+        <item>Asia/Oral</item>
+        <item>Asia/Rangoon</item>
+        <item>Asia/Seoul</item>
+        <item>Asia/Shanghai</item>
+        <item>Asia/Taipei</item>
+        <item>Asia/Tbilisi</item>
+        <item>Asia/Tehran</item>
+        <item>Asia/Tokyo</item>
+        <item>Asia/Vladivostok</item>
+        <item>Asia/Yakutsk</item>
+        <item>Asia/Yekaterinburg</item>
+        <item>Asia/Yerevan</item>
+        <item>Atlantic/Azores</item>
+        <item>Atlantic/Cape_Verde</item>
+        <item>Atlantic/Reykjavik</item>
+        <item>Atlantic/South_Georgia</item>
+        <item>Australia/Adelaide</item>
+        <item>Australia/Brisbane</item>
+        <item>Australia/Darwin</item>
+        <item>Australia/Hobart</item>
+        <item>Australia/Perth</item>
+        <item>Australia/Sydney</item>
+        <item>Europe/Amsterdam</item>
+        <item>Europe/Athens</item>
+        <item>Europe/Belgrade</item>
+        <item>Europe/Berlin</item>
+        <item>Europe/Brussels</item>
+        <item>Europe/Dublin</item>
+        <item>Europe/Helsinki</item>
+        <item>Europe/London</item>
+        <item>Europe/Minsk</item>
+        <item>Europe/Moscow</item>
+        <item>Europe/Rome</item>
+    </array>
+
+
+    <array name="photo_setting">
+        <item>"All photos"</item>
+        <item>"Only show me the latest 100 photos"</item>
+        <item>"Only show me the latest 200 photos"</item>
+        <item>"Only show me the latest 500 photos"</item>
+        <item>"Only show me the latest 1000 photos"</item>
+    </array>
+
+
+    <array name="AlphaAnimation_type">
+        <item>"AlphaAnimation"</item>
+        <item>"FixAnimation"</item>
+        <item>"RotationZAnimation"</item>
+        <item>"RotationXAnimation"</item>
+        <item>"RotationYAnimation"</item>
+        <item>"TranslationXAnimation"</item>
+        <item>"TranslationYAnimation"</item>
+        <item>"ScaleXAnimation"</item>
+        <item>"ScaleYAnimation"</item>
+    </array>
+
+    <array name="AlphaAnimation">
+        <item>"Fit to Screen"</item>
+        <item>"Fit to Screen(on black)"</item>
+        <item>"Fill Screen(pan)"</item>
+        <item>"Fill Screen(Fixed)"</item>
+    </array>
+
+
+    <array name="time">
+        <item>"5 seconds"</item>
+        <item>"10 seconds"</item>
+        <item>"15 seconds"</item>
+        <item>"20 seconds"</item>
+        <item>"25 seconds"</item>
+        <item>"30 seconds"</item>
+        <item>"1 minute"</item>
+        <item>"5 minute"</item>
+        <item>"10 minute"</item>
+        <item>"30 minute"</item>
+        <item>"1 hour"</item>
+    </array>
+
+    <array name="clock">
+        <item>"Turn off screen"</item>
+        <item>"Show clock"</item>
+    </array>
+
+    <array name="showhide">
+        <item>"Off"</item>
+        <item>"On(12 hour display mode)"</item>
+        <item>"On(24 hour display mode)"</item>
+    </array>
+
+    <!--<string name="wifi">  CONNECTING,-->
+    <!--CONNECTED,-->
+    <!--SUSPENDED,-->
+    <!--DISCONNECTING,-->
+    <!--DISCONNECTED,-->
+    <!--UNKNOWN</string>-->
+    <array name="wifi">
+        <item>"CONNECTING"</item>
+        <item>"CONNECTED"</item>
+        <item>"SUSPENDED"</item>
+        <item>"DISCONNECTING"</item>
+        <item>"DISCONNECTED"</item>
+        <item>"UNKNOWN"</item>
+    </array>
+
+</resources>

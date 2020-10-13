@@ -1,0 +1,102 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!--<item name="android:windowBackground">@drawable/background_icon</item>  //闪屏页图片-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">false</item>&lt;!&ndash;显示虚拟按键，并腾出空间&ndash;&gt;-->
+
+    </style>
+
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="android:windowBackground">@color/white</item>  //闪屏页图片-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">false</item>&lt;!&ndash;显示虚拟按键，并腾出空间&ndash;&gt;-->
+    <!--</style>-->
+
+
+
+    <style name="Remote_dialog_full">
+        <item name="android:windowBackground">@color/intercom_full</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="debug_view_tv_style">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="download_task_info">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:orientation">horizontal</item>
+        //Dialog的windowFrame框为无
+        <item name="android:windowFrame">@null</item>
+        //是否浮现在activity之上
+        <item name="android:windowIsFloating">true</item>
+        //是否半透明
+        <item name="android:windowIsTranslucent">true</item>
+        //是否显示title
+        <item name="android:windowNoTitle">true</item>
+        //设置dialog的背景
+        <item name="android:background">@android:color/transparent</item>
+        //显示区域背景是否透明
+        <item name="android:windowBackground">@android:color/transparent</item>
+        //就是用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5
+        <item name="android:backgroundDimAmount">0.1</item>
+        //显示区域以外是否使用黑色半透明背景
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:paddingTop">1dp</item>
+    </style>
+
+    <style name="item_text_style">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_alpha_out</item>
+        <item name="android:windowExitAnimation">@anim/popup_alpha_in</item>
+    </style>
+
+    <style name="Remote_dialog">
+        <item name="android:windowBackground">@color/intercom_full_transparent_full_black</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="playlisy"  parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/black_33</item>
+
+    </style>
+
+    <style name="wifiConnect_dialog">
+        <item name="android:windowSoftInputMode">stateVisible|adjustPan</item>
+    </style>
+
+
+</resources>

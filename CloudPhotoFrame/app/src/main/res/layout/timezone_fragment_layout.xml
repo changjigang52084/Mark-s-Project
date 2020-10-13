@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time_zone_rb"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/time_zone_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/Set_time_zone"
+        android:textAllCaps="false"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="24sp"
+        android:textStyle="normal" />
+
+
+    <TextClock
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="yyyy-MM-dd"
+        android:format24Hour="yyyy-MM-dd"
+        android:layout_below="@+id/time_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+
+    <TextView
+        android:id="@+id/time_zone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="24sp" />
+
+
+    <TextClock
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:format12Hour="h:mm:ss"
+        android:format24Hour="H:mm:ss"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="normal" />
+
+
+</RelativeLayout>

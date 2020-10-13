@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/later"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/back_last" />
+
+            <TextView
+                android:id="@+id/press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@color/white"
+                android:text="@string/Press"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/connetcz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connectzil"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="70dp">
+
+            <ImageView
+                android:id="@+id/ProMaster"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true" />
+
+            <ListView
+                android:id="@+id/show_wifi_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@color/MainBlue"
+                android:minHeight="5dp"
+                android:scrollbars="none" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/WifiSetup"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome"
+            android:layout_centerHorizontal="true"
+            android:text="@string/PleaseSelect"
+            android:textSize="40dp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/run_diagnostic_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/run_diagnostic"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/resync_frame_rb"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:text="@string/resync_frame"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="18sp" />
+
+</LinearLayout>
