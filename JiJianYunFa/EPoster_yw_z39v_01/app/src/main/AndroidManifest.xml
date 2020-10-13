@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lzkj.ui"
+    android:sharedUserId="android.uid.system">
+
+<!--    android:sharedUserId="android.uid.system"-->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.lzkj.UPLOAD_SCREENTSHOT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!-- 百度定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.lzkj.ui.app.EPosterApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme">
+        <!-- android:configChanges添加了新的属性
+        修改日期：2019年1月19日
+        修改者：cjg-->
+        <activity
+            android:name="com.lzkj.ui.PlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale|screenLayout|mcc|mnc"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Blue_Bg">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+
+        </activity>
+
+<!--        <service android:name="com.lzkj.ui.service.MyServer"/>-->
+
+        <service
+            android:name="com.lzkj.ui.service.NotifyLayoutService"
+            android:exported="true" />
+        <service
+            android:name="com.lzkj.ui.service.ScreenshotService"
+            android:exported="true" />
+
+        <!-- 百度定位SDK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="y1vHwunnfQRQG3txCHusEYKl" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"></action>
+            </intent-filter>
+        </service>
+        <!-- 监听日期广播的receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.DateChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <!-- 切换节目广播的receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.SwitchPrmReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.NOTIFY_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 撤销节目广播的receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.DeletePrmReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receive.NOTFIY_DELETE_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 关闭eposter的receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.StopAppReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.control.app.STOP_APP_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 更新eposter的权重receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.UpdateWeightReceiver">
+            <intent-filter>
+                <action android:name="com.yqkj.action.UPDATE_WEIGHT" />
+            </intent-filter>
+        </receiver>
+
+        <!--解绑的广播  -->
+        <receiver android:name="com.lzkj.ui.receiver.UnbindReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.Unbind_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- U盘检测receiver -->
+        <receiver android:name="com.lzkj.ui.receiver.UDiskCheckReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <!--更新device id的广播  -->
+        <receiver android:name="com.lzkj.ui.receiver.DeviceInfoReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receiver.DEVICE_INFO_ACTION" />
+                <action android:name="com.lzkj.action.DEVICE_ID_ACTION" />
+            </intent-filter>
+        </receiver>
+        <!--素材恢复下载成功  -->
+        <receiver android:name="com.lzkj.ui.receiver.MaterialRepairSuccessReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.MATERIAL_REPAIR_SUCCESS_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!--截图的广播  -->
+        <receiver android:name="com.lzkj.ui.receiver.ScreenshotReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.action.SCREEN_SHOTS_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!--更新天气  -->
+        <receiver android:name="com.lzkj.ui.receiver.UpdateWeatherReceive">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receive.UPDATE_WEATHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 更新音量 -->
+        <receiver android:name="com.lzkj.ui.receiver.UpdateVolumeReceive">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receive.UPDATE_VOLUME"/>
+            </intent-filter>
+        </receiver>
+
+        <!--初始化应用信息  -->
+        <receiver android:name="com.lzkj.ui.receiver.InitReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.INIT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!--更新sd卡路径  -->
+        <receiver android:name="com.lzkj.ui.receiver.UpdateSdcardReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.UPDATE_SDCARD_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 设备管理 -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lzkj.aidlservice"
+    android:sharedUserId="android.uid.system">
+
+<!--    android:sharedUserId="android.uid.system"-->
+
+    <permission
+        android:name="com.lzkj.aidlservice.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.lzkj.aidlservice.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <!-- 个推自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.com.lzkj.aidlservice" />
+
+    <permission
+        android:name="getui.permission.GetuiService.com.lzkj.aidlservice"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".app.CommunicationApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <!-- 绑定服务 -->
+        <service
+            android:name=".service.LoginRequestService"
+            android:exported="true" />
+
+        <!-- 心跳服务 -->
+        <service
+            android:name=".api.heart.HeartService"
+            android:exported="true" />
+
+        <!-- 喂狗服务 -->
+        <!--<service
+        android:name=".service.FeedDogService"
+        android:exported="true" />-->
+
+        <!-- 同步服务 -->
+        <service android:name=".service.SyncService" />
+
+        <!-- 定时休眠的服务 -->
+        <service
+            android:name=".service.TimerSleepScreenService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- 天气服务 -->
+        <service android:name=".service.WeatherService" />
+
+<!--        &lt;!&ndash; 插播广告服务 &ndash;&gt;-->
+<!--        <service-->
+<!--            android:name=".service.SowingAdvertisementService"-->
+<!--            android:exported="true" />-->
+
+        <!-- 汇报磁盘状态服务 -->
+        <service android:name=".service.StorageSpaceService" />
+
+        <!-- 百度定位SDK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="y1vHwunnfQRQG3txCHusEYKl" />
+
+        <!-- 百度定位服务  android:process=":remote" -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"></action>
+            </intent-filter>
+        </service>
+
+        <!-- 接收DownloadService发送过来的截图执行广播 -->
+        <receiver
+            android:name=".receiver.ScreenshotHandlerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.SCREENSHOT_HANDLER_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收开机广播 -->
+        <receiver android:name=".receiver.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收救援广播 -->
+        <receiver android:name=".receiver.RescueBoradcastReceiver">
+            <intent-filter>
+                <action android:name="com.alarm.service.new" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 测试的广播 -->
+        <receiver android:name=".test.TestReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.test.TEST_RECEIVER_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 请求同步节目的广播 -->
+        <receiver android:name=".receiver.RequestSyncPrmReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.receiver.REQUEST_SYNC_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收DS-Control发送过来的命令执行广播 -->
+        <receiver
+            android:name=".receiver.ResponseCmdStateReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.cmd.REPORT_STATE_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收DS-Control发送过来的app安装命令执行中的广播 -->
+        <receiver
+            android:name=".receiver.InstallAppReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.cmd.REPORT_EXECUTING_INSTALL_APP_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听网络状态的广播 -->
+        <receiver android:name=".receiver.NetwrokStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机守护的广播 -->
+        <!--<receiver
+            android:name="com.lzkj.aidlservice.receiver.GuardReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lz.action.GUAR_RECEIVER" />
+            </intent-filter>
+        </receiver>-->
+
+        <!-- 广告机开关机状态（亮屏和黑屏）的广播 -->
+        <receiver
+            android:name=".receiver.ShartupShutdownReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lz.action.device_shartup_shutdown" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机解绑的广播 -->
+        <receiver
+            android:name=".receiver.UnbindReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lz.action.test.UNBIND" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".restart_app.killSelfService"
+            />
+
+        <!-- 广告机eposter退出的广播 -->
+        <receiver
+            android:name=".receiver.ExitReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.action.EXIT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机eposter撤销节目的广播 -->
+        <receiver
+            android:name=".receiver.DeletePrmReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receive.REPORT_DELETE_PRM_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Launcher获取二维码信息的广播 -->
+        <receiver
+            android:name=".receiver.GetQRCodeInfoReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.ui.receive.GET_QRCODE_INFO" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机MallPoster获取终端id的广播 -->
+        <receiver
+            android:name=".receiver.GetDeviceIdReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.nextation.mallposter.receive.GET_DEVICE_ID" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 售货机app获取终端key的广播 -->
+        <receiver
+            android:name=".receiver.GetDeviceKeyReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.yqhd.vendingmachinedemo.receive.GET_DEVICE_KEY" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机MallPoster获取终端定位城市的广播 -->
+        <receiver
+            android:name=".receiver.GetDeviceLocationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.nextation.mallposter.receive.GET_DEVICE_LOCATION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 广告机MallPoster获取工作服务器的广播 -->
+        <receiver
+            android:name=".receiver.GetMessageServerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.nextation.mallposter.receive.GET_MESSAGE_SERVER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 主动更新天气的广播 -->
+        <receiver
+            android:name=".receiver.UpdateWeatherReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.action.UPDATE_WEATHER_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 更新SD卡的广播 -->
+        <receiver
+            android:name=".receiver.UpdateSdcardReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.UPDATE_SDCARD_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接受屏幕点亮的广播 -->
+        <receiver
+            android:name=".receiver.ScreenshotStateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.screen_on" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="GVF0IuSLawAVxUnPJ5OoW2" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="D4VJLdyUJ26ZAw9vdfZGa" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="wcnrFvzIEC9tZaCrNXdlkA" />
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 配置第三方Receiver获取传透消息 -->
+        <receiver
+            android:name=".push.igetui.GeTuiReceiverMsg"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.GVF0IuSLawAVxUnPJ5OoW2" />
+            </intent-filter>
+        </receiver>
+
+        <!--用户自定义服务名-->
+        <service
+            android:name=".service.DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+
+        <!-- JPush 推送配置开始 -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lzkj.aidlservice" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.lzkj.aidlservice" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".push.jpush.JpushRevceiverMsg"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.lzkj.aidlservice" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="极光推送的AppKey" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+        <!--更新工作时间的广播接收器-->
+        <receiver
+            android:name=".receiver.UpdateWorkTimeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lz.action.worktime.UpdateWorkTime" />
+            </intent-filter>
+        </receiver>
+        <!-- JPush 推送配置结束 -->
+
+    </application>
+
+</manifest>

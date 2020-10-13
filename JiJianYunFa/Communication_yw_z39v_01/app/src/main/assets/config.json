@@ -1,0 +1,9 @@
+{
+  "flow":-1,
+  "re":1,
+  "app":1,
+  "app_type":1,
+  "log":true,
+  "log_validity":-5,
+  "_comment":"flow 默认最大上限流量为1024M,设置-1表示不限制流量,re网络运行环境ONLINE = 1,OFFLINE = -1,GREY_ONLINE = 0,app服务于哪个app,DSPLUG_APP = 1,SOCIAL_APP = 2,app_type ME = 0,YW = 1,log开启log值为true,false关闭log,log_validity:负数表示保留的天数，例如-5表示日志有效期为5天"
+}

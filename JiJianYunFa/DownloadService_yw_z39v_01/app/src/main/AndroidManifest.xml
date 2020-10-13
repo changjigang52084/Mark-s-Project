@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lzkj.downloadservice"
+    android:sharedUserId="android.uid.system">
+
+<!--    android:sharedUserId="android.uid.system"-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.lzkj.downloadservice.app.DownloadApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+<!--        <meta-data-->
+<!--            android:name="CHANNEL_NAME"-->
+<!--            android:value="${CHANNEL_VALUE}"></meta-data>-->
+        <!--<activity
+            android:name="com.lzkj.downloadservice.DownloadActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <data
+                    android:host="com.lzkj"
+                    android:scheme="http" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <service
+            android:name="com.lzkj.downloadservice.service.UnbindService"
+            android:exported="true" />
+        <service
+            android:name="com.lzkj.downloadservice.service.ResposeDownloadService"
+            android:exported="true" />
+        <service
+            android:name="com.lzkj.downloadservice.service.RecoveryDownloadTaskService"
+            android:exported="true" />
+        <service
+            android:name="com.lzkj.downloadservice.service.TimerUploadLogService"
+            android:exported="true"
+            android:process=":upload">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.action.TIMER_UPLOAD_ACTION" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.ExitReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.action.EXIT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.lzkj.downloadservice.receiver.ReceiverDeviceId">
+            <intent-filter>
+                <action android:name="com.lzkj.action.DEVICE_ID_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.RetryRedisReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.RETRY_REDIS_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.CancelDownloadReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.CANCEL_DOWNLOAD_LIST_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.ScreentshotReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.action.UPLOAD_SCREENTSHOT_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.lzkj.downloadservice.receiver.UnbindReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.aidlservice.Unbind_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.lzkj.downloadservice.receiver.RecoveryDamageFileReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.receiver.RECOVERY_DAMAGE_FILE_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.UploadLogReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.receiver.UPLOAD_LOG_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.lzkj.downloadservice.receiver.NetworkStateReceive"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--打开log 发送log  -->
+        <!--      <receiver android:name="com.lzkj.downloadservice.receiver.SocketReceiver" >
+                 <intent-filter>
+                     <action android:name="com.lzkj.downloadservice.receiver.DOWNLOAD_OPEN_LOG" />
+                 </intent-filter>
+             </receiver> -->
+        <!--初始化download -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.InitReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.download.INIT_ACTION" />
+            </intent-filter>
+        </receiver>
+        <!--停止所有download -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.StopAllDownloadReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.download.STOP_DOWNLOAD_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!--流量阀值更新的广播  -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.FlowReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.receiver.UPDATE_FLOW_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收消息服务器的广播 -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.UpdateServerReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.action.MESSAGE_SERVER_ACTION" />
+            </intent-filter>
+        </receiver>
+        <!-- 更新sd卡的广播 -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.UpdateSdcardReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.UPDATE_SDCARD_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 下载文件列表的广播 -->
+        <receiver android:name="com.lzkj.downloadservice.receiver.DownloadFileReceiver">
+            <intent-filter>
+                <action android:name="com.lzkj.downloadservice.DOWNLOAD_FILE_LIST_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel_ID" />
+    </application>
+
+</manifest>

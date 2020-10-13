@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Launcher</string>
+    <string name="action_settings">Settings</string>
+    <string name="version_name">1.0.87.20201013.m.beta</string>
+    <string name="default_city">深圳市</string>
+    <string name="user_name">用户名</string>
+    <string name="user_name_hint">请输入用户名</string>
+    <string name="user_name_is_null">用户名不能为空!</string>
+    <string name="devic_name">终端名</string>
+    <string name="devic_name_is_null">终端名不能为空!</string>
+    <string name="devic_name_hint">请输入终端名</string>
+    <string name="passwd">密　码</string>
+    <string name="passwd_is_null">密码不能为空!</string>
+    <string name="passwd_hint">请输入密码</string>
+    <string name="login">扫码绑定</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_login">取消登录</string>
+    <string name="logining">正在初始化数据</string>
+    <string name="tip_load_device_info">正在获取终端信息</string>
+    <string name="clear_btn">清除按钮</string>
+    <string name="error_postern_key">后门密匙错误</string>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+     <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+        <com.google.zxing.view.ViewfinderView
+            android:id="@+id/viewfinder_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/base_transparent" />
+    </FrameLayout>
+    
+
+    <!-- topbar -->
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_topbar" >
+
+        <RelativeLayout
+            android:id="@+id/rl_home_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/home_page_rl_margin_left" >
+
+            <ImageView
+                android:id="@+id/img_home_page_icon"
+                android:layout_width="@dimen/home_page_img_width"
+                android:layout_height="@dimen/home_page_img_height"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:id="@+id/txt_home_page"
+                style="@style/text_topbar_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/home_page_txt_margin_left"
+                android:layout_toRightOf="@id/img_home_page_icon"
+                android:text="@string/home_page" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topbar_title"
+            style="@style/text_topbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/bind_device" />
+
+       
+    </RelativeLayout>
+
+   
+</RelativeLayout>

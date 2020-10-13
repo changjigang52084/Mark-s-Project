@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EPoster</string>
+    <string name="version_name">2.1.87.20201013.me.beta</string>
+    <string name="version_name_str">2.1.10.201606230956.beta</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_name">用户名</string>
+    <string name="user_name_hint">请输入用户名</string>
+    <string name="user_name_is_null">用户名不能为空!</string>
+    <string name="devic_name">终端名</string>
+    <string name="default_city">深圳</string>
+    <string name="devic_name_is_null">终端名不能为空!</string>
+    <string name="devic_name_hint">请输入终端名</string>
+    <string name="passwd">密　码</string>
+    <string name="passwd_is_null">密码不能为空!</string>
+    <string name="passwd_hint">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_login">取消登录</string>
+    <string name="logining">登录中&#8230;</string>
+    <string name="not_program">无节目播放,请登录后台发布节目!</string>
+    <string name="overdue_program">所有节目已过期,请重新发布节目!</string>
+    <string name="curretn_date">当前日期:</string>
+    <string name="next_play_time">当前时间段无节目播放,下一个节目的播放时间是:</string>
+    <string name="tomorrow_play_time">当前时间段无节目播放,下一个时间段播放节目的时间为明天:</string>
+    <string name="program_expired">所有节目已过期</string>
+    <string name="program_expired_end_time">节目已过期,节目的有效日期截止到:</string>
+    <string name="add_text_resource">　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　请添加文本资源!　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</string>
+    <string name="app_error_tip_msg">非常抱歉,程序一不小心挂了,五秒以后会自动启动!</string>
+    <string name="clear_btn">清除按钮</string>
+    <string name="prm_file_error">当前节目里面的素材都已经损坏...</string>
+    <string name="error_postern_key">后门密匙错误</string>
+    
+    <string name="weather">天气状况：%1$s</string>
+    <string name="current_temp">实时气温：%1$s</string>
+    <string name="temp">气温%s</string> 
+    <string name="wind_power">风力：%1$s</string> 
+    <string name="wind_direction">风向：%1$s</string> 
+    <string name="city">市</string> 
+    <string name="temp_unit">C</string> 
+    
+    <string name="tip_area_is_null">节目无区域</string> 
+    <string name="tip_area_file_is_null">节目的区域中没有素材</string> 
+    <string name="tip_udisk_copy_over">节目拷贝完成</string> 
+    <string name="tip_udisk_copying">正在拷贝节目...!</string> 
+
+</resources>

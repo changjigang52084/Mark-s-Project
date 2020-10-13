@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffee"
+    android:orientation="vertical" >
+
+    <!-- topbar -->
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_topbar" >
+
+        <RelativeLayout
+            android:id="@+id/rl_home_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/home_page_rl_margin_left" >
+
+            <ImageView
+                android:id="@+id/img_home_page_icon"
+                android:layout_width="@dimen/home_page_img_width"
+                android:layout_height="@dimen/home_page_img_height"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:id="@+id/txt_home_page"
+                style="@style/text_topbar_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/home_page_txt_margin_left"
+                android:layout_toRightOf="@id/img_home_page_icon"
+                android:text="@string/home_page" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topbar_title"
+            style="@style/text_topbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/bind_device" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_device_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/topbar"
+        android:padding="@dimen/padding_5" >
+
+        <RelativeLayout
+            android:id="@+id/rl_scanning_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <!-- 终端MAC -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_device_mac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/txt_device_mac_title"
+                        style="@style/text_device_manager_style1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mac_address" />
+
+                    <TextView
+                        android:id="@+id/txt_device_mac_value"
+                        style="@style/text_device_manager_style1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_device_mac_title" />
+                </RelativeLayout>
+
+                <!-- 终端位置 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_device_position"
+                    style="@style/text_device_manager_style1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_device_mac"
+                    android:layout_marginTop="10dp"
+                     >
+
+                    <TextView
+                        android:id="@+id/txt_device_position_title"
+                        style="@style/text_device_manager_style1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location_city" 
+                        android:layout_centerVertical="true"
+                        />
+
+                   <!--  <TextView
+                        android:id="@+id/txt_device_position_value"
+                        style="@style/text_device_manager_style1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_device_position_title" /> -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_privince_city"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_device_position_title" 
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                         android:layout_centerVertical="true"
+                         >
+
+                        <Spinner
+                            android:id="@+id/provinces"
+                            style="@style/location_spinner_style"
+            				android:layout_marginRight="5dp"
+            				 />
+
+                        <Spinner
+                            android:id="@+id/city"
+                            style="@style/location_spinner_style"
+            				android:layout_marginLeft="5dp"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_name"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/rl_scanning_info"
+            android:background="@drawable/spinner_bg" 
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_device_icon"
+                android:layout_width="@dimen/icon_device_img_width"
+                android:layout_height="@dimen/icon_device_img_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/icon_device_img_margin_left"
+                android:src="@drawable/device_icon2" />
+
+            <EditText
+                android:id="@+id/edit_device_name"
+                style="@style/edit_text_style"
+                android:layout_toRightOf="@id/img_device_icon"
+                android:hint="@string/input_device_name"
+                android:imeOptions="actionNext" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_choose_device_direction"
+            style="@style/text_device_manager_style3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_device_name"
+            android:layout_marginTop="10dp"
+            android:text="@string/choose_device_direction" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_device_screen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_choose_device_direction"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_horizontal_screen"
+                style="@style/radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:padding="10dp"
+                android:text="@string/horizontal_screen" />
+
+            <RadioButton
+                android:id="@+id/btn_vertical_screen"
+                style="@style/radio_btn_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/vertical_screen" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbox_together_social"
+            style="@style/radio_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radiogroup_device_screen"
+            android:text="@string/relation_bind_to_social"
+            android:textSize="@dimen/font_size_14" />
+
+        <TextView
+            android:id="@+id/tv_auth_list_title"
+            style="@style/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cbox_together_social"
+            android:text="@string/auth_list_title" />
+
+        <Spinner
+            android:id="@+id/spn_auth_list"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_auth_list_title"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:id="@+id/img_spinner_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_auth_list_title"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/spinner_icon" />
+
+        <LinearLayout
+            android:id="@+id/rl_btn_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spn_auth_list"
+            android:layout_marginTop="10dp" >
+
+            <Button
+                android:id="@+id/btn_bind"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_submit_bind_selector"
+                android:text="@string/bind" />
+
+            <Button
+                android:id="@+id/btn_cancel_bind"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_cancel_bind_selector"
+                android:text="@string/scanning_again" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

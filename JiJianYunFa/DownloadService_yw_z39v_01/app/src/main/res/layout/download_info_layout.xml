@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_task_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_task_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/task_amount"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务数量：" />
+
+            <TextView
+                android:id="@+id/task_amount_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_task_success_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/success_task_amount"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载完成：" />
+
+            <TextView
+                android:id="@+id/success_task_amount_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+        
+          <LinearLayout
+            android:id="@+id/ll_task_fail_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/fail_task_amount"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载失败：" />
+
+            <TextView
+                android:id="@+id/fail_task_amount_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+    
+     <LinearLayout
+        android:id="@+id/ll_task_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+          
+          <TextView
+                android:id="@+id/task_name"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前任务：" />
+
+            <TextView
+                android:id="@+id/task_name_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+ 	</LinearLayout>
+ 	
+       <LinearLayout
+        android:id="@+id/ll_task_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+          
+          <TextView
+                android:id="@+id/task_url"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载地址：" />
+
+            <TextView
+                android:id="@+id/task_url_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+            
+            
+ 	</LinearLayout>
+ 	
+        <LinearLayout
+        android:id="@+id/ll_task_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+          
+          <TextView
+                android:id="@+id/task_progress"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进度：" />
+
+            <TextView
+                android:id="@+id/task_progress_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%" />
+            
+            
+ 	</LinearLayout>
+ 	
+        <LinearLayout
+        android:id="@+id/ll_task_speed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+          
+          <TextView
+                android:id="@+id/task_speed"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载速度：" />
+
+            <TextView
+                android:id="@+id/task_speed_value"
+                style="@style/download_task_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+            
+            
+ 	</LinearLayout>
+</LinearLayout>

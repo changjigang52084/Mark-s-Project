@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_color">
+
+    <!--
+         <FrameLayout 
+        android:id="@+id/top_right_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        ></FrameLayout>
+    
+     <FrameLayout 
+        android:id="@+id/top_left_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        ></FrameLayout>
+     
+     <FrameLayout 
+        android:id="@+id/bottom_right_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        ></FrameLayout>
+     
+     
+      <FrameLayout 
+        android:id="@+id/bottom_left_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        ></FrameLayout>
+
+    -->
+
+
+    <!--
+         <FrameLayout 
+        android:id="@+id/fl_weather"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        />
+
+    -->
+    <!--     <com.lzkj.ui.fragment.view.MainFrameLayoutView -->
+
+    <FrameLayout
+        android:id="@+id/mian_flayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_color">
+
+        <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_color" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_tip_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/bg_red_color"
+        android:textSize="@dimen/font_size12"
+        android:visibility="gone" />
+</RelativeLayout>

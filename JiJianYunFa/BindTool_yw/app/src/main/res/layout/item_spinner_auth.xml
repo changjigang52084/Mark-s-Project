@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/base_white" >
+
+    <TextView
+        android:id="@+id/tv_auth_name_title"
+        style="@style/SpinnerTvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/auth_name_title" />
+
+    <TextView
+        android:id="@+id/tv_auth_name"
+        style="@style/SpinnerTvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/tv_auth_name_title"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_auth_remain_capacity_title"
+        style="@style/SpinnerTvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_5"
+        android:layout_toRightOf="@id/tv_auth_name"
+        android:text="@string/auth_number_title" />
+
+    <TextView
+        android:id="@+id/tv_auth_remain_capacity"
+        style="@style/SpinnerTvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/tv_auth_remain_capacity_title"
+        android:text="TextView" />
+
+</RelativeLayout>

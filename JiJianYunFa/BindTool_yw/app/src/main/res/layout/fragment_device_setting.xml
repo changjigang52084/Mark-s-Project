@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_white">
+
+
+    <LinearLayout
+        android:id="@+id/ll_device_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/device_setting_ll_magin_top"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/device_tab_icon_uncheck" />
+
+        <TextView
+            style="@style/text_device_manager_style1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/device_setting_txt_magin_left"
+            android:text="@string/device_setting" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_device_setting"
+        android:layout_marginTop="@dimen/device_name_ll_magin_top"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_device_manager_style3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_name_title" />
+
+        <TextView
+            android:id="@+id/txt_device_name_value"
+            style="@style/text_device_manager_style3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_settings1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_device_name"
+        android:layout_marginTop="@dimen/device_name_ll_magin_top"
+        >
+
+        <Button
+            android:id="@+id/btn_shutdown"
+            android:layout_width="@dimen/device_shutdown_btn_width"
+            android:layout_height="@dimen/device_shutdown_btn_width"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_shutdown" />
+
+        <Button
+            android:id="@+id/btn_reboot"
+            android:layout_width="@dimen/device_shutdown_btn_width"
+            android:layout_height="@dimen/device_shutdown_btn_width"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_reboot" />
+
+        <Button
+            android:id="@+id/btn_unbind"
+            android:layout_width="@dimen/device_shutdown_btn_width"
+            android:layout_height="@dimen/device_shutdown_btn_width"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_unbind" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_settings2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_settings1"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:id="@+id/btn_screen_shots"
+            android:layout_width="@dimen/device_screenshot_btn_width"
+            android:layout_height="@dimen/device_screenshot_btn_height"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_screenshot" />
+
+        <Button
+            android:id="@+id/btn_check_screenshot"
+            android:layout_width="@dimen/device_screenshot_btn_width"
+            android:layout_height="@dimen/device_screenshot_btn_height"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_check_screenshot" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_settings2"
+        android:layout_margin="@dimen/screenshot_img_margin"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:id="@+id/txt_screenshot_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_device_manager_style2"
+            />
+
+        <ImageView
+            android:id="@+id/img_screenshot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_settings2"
+            />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

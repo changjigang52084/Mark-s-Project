@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_block">#e0000000</color>
+    <color name="base_red">#FF0000</color>
+    <color name="base_white">#FFFFFF</color>
+    <color name="base_blue">#0000FF</color>
+    <color name="base_violet">#673AB7</color>
+    <color name="base_gray">#999999</color>
+    <color name="base_black">#000000</color>
+    <color name="base_green">#00ff00</color>
+    <color name="base_yellow">#ffff00</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="dark_blue">#0364ab</color>
+
+<!--     <color name="tab_select_color">#0483FF</color>
+    <color name="tab_unselect_color">#6d6d6d</color> -->
+    <color name="tab_select_color">#0483FF</color>
+    <color name="tab_unselect_color">#6d6d6d</color>
+    <!-- 透明 -->
+    <color name="base_transparent">#00000000</color>	
+    
+    <color name="text_device_info">#434343</color>
+    
+    <color name="divider">#eaeaea</color>
+    	
+    <color name="bg_topbar">#04315d</color>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+
+    <string name="app_name">Dsplug</string>
+    <string name="app_name_jjfb">极简发布</string>
+    <string name="app_name_jjyf">极简云发</string>
+    <string name="app_version">1.1.81.20200923.yw.beta</string>
+    <string name="home_page">首页</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+    <string name="tip_exit">再次点击返回键退出应用</string>
+
+    <!-- 登录 -->
+    <string name="login">登录</string>
+    <string name="cancel">取消</string>
+    <string name="user_name">用户名</string>
+    <string name="ip_post">ip地址和端口号</string>
+    <string name="passwd">密码</string>
+    <string name="cancel_login">取消登录</string>
+    <string name="logining">登录中&#8230;</string>
+    <string name="clear_btn">清除按钮</string>
+    <string name="passwd_is_null">密码不能为空!</string>
+    <string name="user_name_is_null">用户名不能为空!</string>
+    <string name="remember_password">记住账号</string>
+    <string name="test_mode">测试模式</string>
+    <string name="gary_mode">灰度模式</string>
+    <string name="online_mode">线上模式</string>
+    <string name="blend_mode">混合模式</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failure">登录失败：</string>
+    <string name="session_invalid">会话超时，请重新登录</string>
+    <string name="network_exception">网络链接失败</string>
+    <string name="server_exception">服务器异常，请稍后再试。</string>
+     
+    <!-- 菜单 -->
+    <string name="unbind_device">设备解绑</string>
+    <string name="check_device">查看设备</string>
+    <string name="exit">退出登录</string>
+    <string name="all">全部</string>
+    <string name="standby">待机</string>
+    <string name="offline">离线</string>
+    <string name="bind_new_device">绑定新终端</string>
+    <string name="device_manager">终端管理</string>
+
+    <!-- 终端管理 -->
+    <string name="device_name">终端名称</string>
+    <string name="state">状态</string>
+    <string name="online">工作中</string>
+    <string name="wait">让服务器飞一会...</string>
+    <string name="title_tabhost_all_device">全部终端</string>
+    <string name="title_tabhost_offline_device">离线终端</string>
+    <string name="title_tabhost_standby_device">待机终端</string>
+    <string name="title_tabhost_manager">管理</string>
+
+    <!-- 终端设置 -->
+    <string name="device_name_title">终端名称：</string>
+    <string name="device_name_value">终端名称：%1$s</string>
+    <string name="work_time_value">工作时间：%1$s</string>
+    <string name="screen_direction_value">屏幕方向：%1$s</string>
+    <string name="device_state_value">终端状态：%1$s</string>
+    <string name="storage_total_value">存储空间：%1$s</string>
+    <string name="storage_use_value">可用空间：%1$s</string>
+    <string name="device_location_value">终端位置：%1$s</string>
+
+    <string name="device_setting">终端设置</string>
+    <string name="unbind">设置解绑</string>
+    <string name="shutdown">设置关机</string>
+    <string name="reboot">设置重启</string>
+    <string name="shot_time">截屏时间：%1$s</string>
+    <string name="check_screenshot">查看截图</string>
+    <string name="screen_shots">截屏</string>
+    <string name="unbind_now">正在解绑...</string>
+    <string name="shutdown_now">正在关机...</string>
+    <string name="reboot_now">正在重启...</string>
+    <string name="check_screenshot_now">获取截屏中...</string>
+    <string name="screenshot_now">截屏中...</string>
+
+    <string name="unbind_confirm">确定解绑？</string>
+    <string name="shutdown_confirm">确定关机？</string>
+    <string name="reboot_confirm">确定重启？</string>
+
+    <string name="reboot_success">重启成功</string>
+    <string name="reboot_fail">重启失败</string>
+    <string name="unbind_success">解绑成功</string>
+    <string name="unbind_fail">解绑失败</string>
+    <string name="shutdown_success">关机成功</string>
+    <string name="shutdown_fail">关机失败</string>
+    <string name="shots_success">截屏成功</string>
+    <string name="shots_fail">截屏失败</string>
+    <string name="check_shots_success">获取截屏成功</string>
+    <string name="check_shots_fail">获取截屏失败</string>
+
+    <!-- 绑定 -->
+    <string name="input_device_name">请输入终端名称</string>
+    <string name="mac_address">终端MAC:</string>
+    <string name="location_city">终端位置:</string>
+    <string name="horizontal_screen">横屏</string>
+    <string name="vertical_screen">竖屏</string>
+    <string name="response_data_is_fail">通讯失败:</string>
+    <string name="binding">绑定中...</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="bind_failure">绑定失败：</string>
+    <string name="scanning_error">扫码异常</string>
+    <string name="scanning_result_decrypt_failed">扫码内容解密失败</string>
+    <string name="scanning_qrcode_error">二维码失效</string>
+    <string name="bind">确认绑定</string>
+    <string name="scanning_again">重新扫码</string>
+    <string name="bind_device">绑定终端</string>
+    <string name="choose_device_direction">请选择屏幕方向:</string>
+    <string name="bind_to_dsplug">极简发布正式版</string>
+    <string name="bind_to_social">极简发布社交版</string>
+    <string name="relation_bind_to_social">关联绑定社交版</string>
+    <string name="auth_list_title">授权列表:</string>
+    <string name="auth_name_title">名称：</string>
+    <string name="auth_number_title">剩余数:</string>
+    <string name="continue_bind">继续绑定</string>
+    <string name="end_bind">结束绑定</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DownloadService</string>
+    <string name="version_name">1.0.87.20201013.yw.beta</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="upload_success">上传成功!</string>
+    <string name="upload_fail">上传失败!</string>
+    <string name="shot_success">截图上传成功!</string>
+    <string name="shot_fail">截图上传失败!</string>
+
+</resources>

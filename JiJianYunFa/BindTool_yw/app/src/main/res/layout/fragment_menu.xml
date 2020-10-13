@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/manger_bg"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+    
+
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar" >
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="58dp"
+            android:src="@drawable/logo_icon" />
+        
+        <RelativeLayout 
+            android:id="@+id/rl_topbar_title"
+            android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/img_logo"
+             android:paddingTop="10dp"
+            >
+            
+            
+            
+        <TextView
+            android:id="@+id/tv_device_manger_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/device_manager"
+            android:textSize="18sp"
+             />
+        
+       
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/refresh_btn_icon" 
+            android:layout_centerVertical="true"
+            />
+         </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_check_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+         >
+
+        <RelativeLayout
+            android:id="@+id/btn_all_layout"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/manger_btn" >
+
+            <Button
+                android:id="@+id/btn_all_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/tv_device_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/base_white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_all_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/all"
+                android:textColor="@color/base_white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/device_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_offline_layout"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:layout_below="@id/btn_all_layout"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/manger_btn" >
+
+            <Button
+                android:id="@+id/btn_offline_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/tv_offline_device_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/base_white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_offline_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/offline"
+                android:textColor="@color/base_white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/offline_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_standby_layout"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:layout_toRightOf="@id/btn_all_layout"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/manger_btn" >
+
+            <Button
+                android:id="@+id/btn_standby_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/tv_standby_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/base_white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/btn_standby_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="@string/standby"
+                android:textColor="@color/base_white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/standby_btn_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_new_bind_layout"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            android:layout_below="@id/btn_standby_layout"
+            android:layout_toRightOf="@id/btn_offline_layout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/manger_btn" >
+
+            <Button
+                android:id="@+id/btn_new_bind_device"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/tv_new_bind_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/bind_new_device"
+                android:textColor="@color/base_white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/bind_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:text="@string/exit"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+    <TextView 
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textColor="@color/base_white"
+        android:textSize="@dimen/font_size_14"
+        android:layout_toLeftOf="@id/btn_exit"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        />
+
+</RelativeLayout>

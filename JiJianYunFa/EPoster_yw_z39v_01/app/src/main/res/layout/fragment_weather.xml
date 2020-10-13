@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+
+    <!-- 城市 -->
+
+    <TextView
+        android:id="@+id/txt_city_name"
+        style="@style/txt_weather_style" />
+
+    <!-- 天气 -->
+
+    <ImageView
+        android:id="@+id/img_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_city_name"
+        android:scaleType="fitCenter" />
+    <!-- 气温 -->
+
+    <TextView
+        android:id="@+id/txt_temp"
+        style="@style/txt_weather_style"
+        android:layout_toRightOf="@id/img_weather" />
+
+</RelativeLayout>

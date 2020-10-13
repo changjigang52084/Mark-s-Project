@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_device_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_item_height"
+
+        >
+
+        <ImageView
+            android:id="@+id/img_device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_device_name"
+            style="@style/text_device_manager_style3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_device_state"
+            android:layout_marginLeft="10dp"
+            android:maxLength="20"
+            android:text="A10终端机"
+            />
+
+
+        <ImageButton
+            android:id="@+id/btn_device_manager"
+            android:layout_width="@dimen/device_manager_btn_width"
+            android:layout_height="@dimen/device_manager_btn_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/device_manager_text_margin_right"
+            android:background="@drawable/btn_device_setting" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_device_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_device_item"
+        android:background="@color/light_gray"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_device_name2"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_device_location"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_device_name2" />
+
+        <TextView
+            android:id="@+id/txt_work_time"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_device_location" />
+
+        <TextView
+            android:id="@+id/txt_screen_direction"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_work_time" />
+
+
+        <TextView
+            android:id="@+id/txt_storageTotal"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_screen_direction" />
+
+        <TextView
+            android:id="@+id/txt_storageUse"
+            style="@style/text_device_manager_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_storageTotal" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

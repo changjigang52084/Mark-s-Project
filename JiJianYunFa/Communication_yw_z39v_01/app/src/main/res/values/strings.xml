@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Communication</string>
+    <string name="version_name">1.0.87.20201013.m.beta</string>
+    <string name="action_settings">Settings</string>
+    <string name="device_not_auther">终端没有授权，请扫码绑定终端</string>
+    <string name="connect_timeout">连接超时，您的网络不给力哟。</string>
+    <string name="response_update_prm">接受到更新节目的命令!</string>
+    <string name="response_unbind">接受到解绑的命令!</string>
+    <string name="response_cancel_prm">接受到删除节目的命令!</string>
+    <string name="tip_folw_over">终端流量已使用完%sM,请重新配置流量!</string>
+    <string name="response_shot_command">接受到截图的命令!</string>
+    <string name="app_error_tip_msg">非常抱歉,程序一不小心挂了,五秒以后会自动启动!</string>
+    <string name="upload_fail">上传失败</string>
+    <string name="shot_command_fail">截图命令执行失败!</string>
+    <string name="response_data_is_fail">返回的数据为空!</string>
+    <string name="bind_success">绑定成功!</string>
+    <string name="prm_del_error">节目删除失败</string>
+</resources>

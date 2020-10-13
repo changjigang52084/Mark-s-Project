@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_a">
+
+    <FrameLayout
+        android:id="@+id/top_right_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <FrameLayout
+        android:id="@+id/top_left_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_right_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_left_window"
+        style="@style/postern_window_style"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/app_info_tv"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/debug_tv"
+        style="@style/text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_toRightOf="@id/app_info_tv"
+        android:gravity="center"
+        android:textColor="#ff00ff"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/login_tv"
+            style="@style/login_text_style"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login" />
+
+        <RelativeLayout
+            android:id="@+id/rl_scanning_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_tv"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="@dimen/qr_code_w"
+                android:layout_height="@dimen/qr_code_w" />
+
+            <TextView
+                android:id="@+id/tv_tip_data_loading"
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tip_load_device_info" />
+
+            <ProgressBar
+                android:id="@+id/prb_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_tip_data_loading"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result_tv"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_scanning_login"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#ff00ff"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/client_id_tv"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="35dp"
+            android:textColor="#ff00ff"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

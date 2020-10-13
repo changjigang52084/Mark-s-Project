@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_white" >
+
+    <!-- topbar -->
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_topbar" >
+
+        <RelativeLayout
+            android:id="@+id/rl_home_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/home_page_rl_margin_left" >
+
+            <ImageView
+                android:id="@+id/img_home_page_icon"
+                android:layout_width="@dimen/home_page_img_width"
+                android:layout_height="@dimen/home_page_img_height"
+                android:layout_centerVertical="true"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:id="@+id/txt_home_page"
+                style="@style/text_topbar_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/home_page_txt_margin_left"
+                android:layout_toRightOf="@id/img_home_page_icon"
+                android:text="@string/home_page" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topbar_title"
+            style="@style/text_topbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/device_manager" />
+
+        <ImageView
+            android:id="@+id/img_refresh"
+            android:layout_width="@dimen/img_refresh_width"
+            android:layout_height="@dimen/img_refresh_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/refresh_img_margin_right"
+            android:src="@drawable/btn_refresh" />
+
+        <ImageView
+            android:id="@+id/img_scanning_bind"
+            android:layout_width="@dimen/img_scanning_width"
+            android:layout_height="@dimen/img_scanning_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/bind_img_margin_right"
+            android:src="@drawable/btn_scanning_bind" />
+    </RelativeLayout>
+
+    <!-- 终端列表首行 -->
+
+    <RelativeLayout
+        android:id="@+id/device_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_list_header_rl_height"
+        android:layout_below="@id/topbar" >
+
+        <TextView
+            android:id="@+id/txt_device_name_title"
+            style="@style/text_device_manager_style1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/device_name_txt_margin_left"
+            android:text="@string/device_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_device_state_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            >
+            <!-- 各个终端状态 (占时隐藏) -->
+            <TextView
+                android:id="@+id/txt_device_state_title"
+                style="@style/text_device_manager_style1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/state"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/ll_device_state_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/img_online_icon"
+		            android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+		            android:src="@drawable/online_state_icon" />
+
+                <TextView
+                    android:id="@+id/txt_device_state_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_device_manager_style2"
+                    android:text="@string/online" />
+
+                <ImageView
+                    android:id="@+id/img_offline_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+		            android:src="@drawable/offline_state_icon"
+		            android:layout_marginLeft="5dp"
+		            />
+
+                <TextView
+                    android:id="@+id/txt_device_state_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_device_manager_style2"
+                    android:text="@string/offline" />
+
+                <ImageView
+                    android:id="@+id/img_standby_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+		            android:src="@drawable/standby_state_icon"
+		            android:layout_marginLeft="5dp"
+		            />
+
+                <TextView
+                    android:id="@+id/txt_device_state_standby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_device_manager_style2"
+                    android:text="@string/standby" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_device_manager"
+            style="@style/text_device_manager_style1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_tabhost_manager"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/device_manager_text_margin_right"
+            />
+
+         <View
+                android:id="@+id/divider_line"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/base_gray"
+                android:layout_alignParentBottom="true"
+                />
+    </RelativeLayout>
+
+    <!-- tab: 所有终端、待机终端、离线终端 -->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_device"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_tabs_height"
+        android:layout_alignParentBottom="true"
+        app:tabIndicatorColor="@color/base_transparent"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage_device"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabs_device"
+        android:layout_below="@id/device_list_header" />
+    
+
+</RelativeLayout>
